@@ -16,18 +16,18 @@ export default function HomePage() {
             <span className="text-2xl font-bold">PCA</span>
           </div>
           <nav className="flex items-center space-x-6">
-            <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
               About
-            </Link>
-            <Link href="#curriculum" className="text-sm font-medium hover:text-primary transition-colors">
+            </a>
+            <a href="#curriculum" className="text-sm font-medium hover:text-primary transition-colors">
               Curriculum
-            </Link>
-            <Link href="#achievements" className="text-sm font-medium hover:text-primary transition-colors">
+            </a>
+            <a href="#achievements" className="text-sm font-medium hover:text-primary transition-colors">
               Achievements
-            </Link>
-            <Link href="#news" className="text-sm font-medium hover:text-primary transition-colors">
+            </a>
+            <a href="#news" className="text-sm font-medium hover:text-primary transition-colors">
               News
-            </Link>
+            </a>
             <Button>Enroll Now</Button>
           </nav>
         </div>
