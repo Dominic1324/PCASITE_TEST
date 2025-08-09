@@ -10,12 +10,12 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center">
+        <div className="container mx-auto flex h-16 items-center justify-between">
           <div className="flex items-center space-x-2">
             <Code className="h-8 w-8 text-primary" />
             <span className="text-2xl font-bold">PCA</span>
           </div>
-          <nav className="ml-auto flex items-center space-x-6">
+          <nav className="flex items-center space-x-6">
             <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
               About
             </Link>
