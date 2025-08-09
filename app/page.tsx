@@ -77,61 +77,82 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Latest News */}
-        <section id="news" className="w-full py-12 md:py-24 lg:py-32">
+        {/* Testimonials (About) */}
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Updates</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Students Say</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Stay updated with our latest achievements, new courses, and student success stories.
+                  Hear from our successful graduates about their journey at PCA.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
               <Card>
-                <CardHeader>
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Dec 15, 2024</span>
+                <CardContent className="pt-6">
+                  <div className="flex items-center space-x-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
                   </div>
-                  <CardTitle>New AI & Machine Learning Track</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Introducing our comprehensive AI/ML curriculum designed for the next generation of developers.
-                    Starting January 2025.
-                  </CardDescription>
+                  <blockquote className="text-sm mb-4">
+                    "PCA's approach to teaching fundamentals first really helped me understand programming deeply. Now
+                    I'm working at Google!"
+                  </blockquote>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="text-xs font-semibold">SK</span>
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold">Sarah Kim</div>
+                      <div className="text-xs text-muted-foreground">Software Engineer at Google</div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader>
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Dec 10, 2024</span>
+                <CardContent className="pt-6">
+                  <div className="flex items-center space-x-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
                   </div>
-                  <CardTitle>Student Wins National Coding Competition</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Sarah Kim, our full-stack development student, secured 1st place in the National Youth Programming
-                    Contest.
-                  </CardDescription>
+                  <blockquote className="text-sm mb-4">
+                    "The instructors are amazing and the curriculum is perfectly structured. I went from zero to
+                    full-stack developer in 6 months."
+                  </blockquote>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="text-xs font-semibold">MJ</span>
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold">Michael Johnson</div>
+                      <div className="text-xs text-muted-foreground">Full-Stack Developer at Startup</div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader>
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Dec 5, 2024</span>
+                <CardContent className="pt-6">
+                  <div className="flex items-center space-x-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
                   </div>
-                  <CardTitle>Partnership with Tech Giants</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    New partnerships with leading tech companies provide direct internship and job opportunities for our
-                    graduates.
-                  </CardDescription>
+                  <blockquote className="text-sm mb-4">
+                    "PCA doesn't just teach you to code, they teach you to think like a programmer. The foundation I
+                    built here is invaluable."
+                  </blockquote>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="text-xs font-semibold">EL</span>
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold">Emily Lee</div>
+                      <div className="text-xs text-muted-foreground">Mobile Developer at Meta</div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -336,82 +357,61 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
+        {/* Latest News */}
+        <section id="news" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Students Say</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Updates</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Hear from our successful graduates about their journey at PCA.
+                  Stay updated with our latest achievements, new courses, and student success stories.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
               <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <blockquote className="text-sm mb-4">
-                    "PCA's approach to teaching fundamentals first really helped me understand programming deeply. Now
-                    I'm working at Google!"
-                  </blockquote>
+                <CardHeader>
                   <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-semibold">SK</span>
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">Sarah Kim</div>
-                      <div className="text-xs text-muted-foreground">Software Engineer at Google</div>
-                    </div>
+                    <Calendar className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">Dec 15, 2024</span>
                   </div>
+                  <CardTitle>New AI & Machine Learning Track</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Introducing our comprehensive AI/ML curriculum designed for the next generation of developers.
+                    Starting January 2025.
+                  </CardDescription>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <blockquote className="text-sm mb-4">
-                    "The instructors are amazing and the curriculum is perfectly structured. I went from zero to
-                    full-stack developer in 6 months."
-                  </blockquote>
+                <CardHeader>
                   <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-semibold">MJ</span>
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">Michael Johnson</div>
-                      <div className="text-xs text-muted-foreground">Full-Stack Developer at Startup</div>
-                    </div>
+                    <Calendar className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">Dec 10, 2024</span>
                   </div>
+                  <CardTitle>Student Wins National Coding Competition</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Sarah Kim, our full-stack development student, secured 1st place in the National Youth Programming
+                    Contest.
+                  </CardDescription>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <blockquote className="text-sm mb-4">
-                    "PCA doesn't just teach you to code, they teach you to think like a programmer. The foundation I
-                    built here is invaluable."
-                  </blockquote>
+                <CardHeader>
                   <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-semibold">EL</span>
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">Emily Lee</div>
-                      <div className="text-xs text-muted-foreground">Mobile Developer at Meta</div>
-                    </div>
+                    <Calendar className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">Dec 5, 2024</span>
                   </div>
+                  <CardTitle>Partnership with Tech Giants</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    New partnerships with leading tech companies provide direct internship and job opportunities for our
+                    graduates.
+                  </CardDescription>
                 </CardContent>
               </Card>
             </div>
