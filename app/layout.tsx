@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { SmoothScroller } from '@/components/smooth-scroller'
 
 export const metadata: Metadata = {
   title: 'v0 App',
@@ -15,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <SmoothScroller />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
