@@ -77,84 +77,55 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonials (About) */}
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
+        {/* About PCA Section */}
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Students Say</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About PCA</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Hear from our successful graduates about their journey at PCA.
+                  We believe that a strong foundation is the key to becoming a truly great developer. Our curriculum is
+                  designed to build excellence from the ground up.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
+            <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
+              <div className="grid gap-2 text-center">
+                <div className="flex justify-center items-center mb-4">
+                  <div className="rounded-full bg-primary text-primary-foreground p-4">
+                    <BookOpen className="h-8 w-8" />
                   </div>
-                  <blockquote className="text-sm mb-4">
-                    "PCA's approach to teaching fundamentals first really helped me understand programming deeply. Now
-                    I'm working at Google!"
-                  </blockquote>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-semibold">SK</span>
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">Sarah Kim</div>
-                      <div className="text-xs text-muted-foreground">Software Engineer at Google</div>
-                    </div>
+                </div>
+                <h3 className="text-xl font-bold">Fundamental-First</h3>
+                <p className="text-sm text-muted-foreground">
+                  We focus on core concepts, data structures, and algorithms to ensure you can tackle any problem, not
+                  just use a specific framework.
+                </p>
+              </div>
+              <div className="grid gap-2 text-center">
+                <div className="flex justify-center items-center mb-4">
+                  <div className="rounded-full bg-primary text-primary-foreground p-4">
+                    <Users className="h-8 w-8" />
                   </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
+                </div>
+                <h3 className="text-xl font-bold">Mentorship-Driven</h3>
+                <p className="text-sm text-muted-foreground">
+                  Our experienced instructors provide personalized guidance and mentorship to help you navigate your
+                  learning journey and career path.
+                </p>
+              </div>
+              <div className="grid gap-2 text-center">
+                <div className="flex justify-center items-center mb-4">
+                  <div className="rounded-full bg-primary text-primary-foreground p-4">
+                    <Trophy className="h-8 w-8" />
                   </div>
-                  <blockquote className="text-sm mb-4">
-                    "The instructors are amazing and the curriculum is perfectly structured. I went from zero to
-                    full-stack developer in 6 months."
-                  </blockquote>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-semibold">MJ</span>
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">Michael Johnson</div>
-                      <div className="text-xs text-muted-foreground">Full-Stack Developer at Startup</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <blockquote className="text-sm mb-4">
-                    "PCA doesn't just teach you to code, they teach you to think like a programmer. The foundation I
-                    built here is invaluable."
-                  </blockquote>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-semibold">EL</span>
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">Emily Lee</div>
-                      <div className="text-xs text-muted-foreground">Mobile Developer at Meta</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+                <h3 className="text-xl font-bold">Career-Oriented</h3>
+                <p className="text-sm text-muted-foreground">
+                  Beyond coding, we prepare you for the job market with portfolio reviews, interview prep, and
+                  connections to the tech industry.
+                </p>
+              </div>
             </div>
           </div>
         </section>
