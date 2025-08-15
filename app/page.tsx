@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink } from "lucide-react"
+import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -135,98 +135,120 @@ export default function HomePage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
+                <Badge variant="secondary">Hello 코딩 과정</Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculum</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Structured learning paths designed to build strong foundations and advance to professional-level
-                  skills.
+                  PCA 정규 과정인 &lt;Hello 코딩&gt; 과정은 6단계로 구성되어, 코딩의 기본이 되는 알고리즘 위에 수학,
+                  과학, 논리 등의 교과 과정을 더한 토론형 수업을 지향합니다.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
               <Card>
                 <CardHeader>
-                  <div className="flex items-center space-x-2">
-                    <BookOpen className="h-6 w-6 text-primary" />
-                    <CardTitle>Fundamentals Track</CardTitle>
+                  <div className="flex items-center justify-between">
+                    <CardTitle>Novice</CardTitle>
+                    <Badge variant="outline">초급</Badge>
                   </div>
-                  <CardDescription>Perfect for beginners starting their coding journey</CardDescription>
+                  <CardDescription>기본 알고리즘 이해</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">What you'll learn:</h4>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Programming Logic & Problem Solving</li>
-                      <li>• Python/Java Fundamentals</li>
-                      <li>• Data Structures & Algorithms</li>
-                      <li>• Object-Oriented Programming</li>
-                    </ul>
-                  </div>
-                  <Badge variant="secondary">12 weeks</Badge>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" />
+                      <span>Code.org / Entry / Scratch</span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <div className="flex items-center space-x-2">
-                    <Code className="h-6 w-6 text-primary" />
-                    <CardTitle>Web Development Track</CardTitle>
+                  <div className="flex items-center justify-between">
+                    <CardTitle>Intermediate Mid</CardTitle>
+                    <Badge variant="outline">중급 1</Badge>
                   </div>
-                  <CardDescription>Build modern web applications from scratch</CardDescription>
+                  <CardDescription>응용 알고리즘 이해</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">What you'll learn:</h4>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• HTML, CSS, JavaScript</li>
-                      <li>• React & Next.js</li>
-                      <li>• Backend Development</li>
-                      <li>• Database Management</li>
-                    </ul>
-                  </div>
-                  <Badge variant="secondary">16 weeks</Badge>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" />
+                      <span>PCA 자체 개발 블록 코딩</span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <div className="flex items-center space-x-2">
-                    <Users className="h-6 w-6 text-primary" />
-                    <CardTitle>Mobile Development Track</CardTitle>
+                  <div className="flex items-center justify-between">
+                    <CardTitle>Intermediate High</CardTitle>
+                    <Badge variant="outline">중급 2</Badge>
                   </div>
-                  <CardDescription>Create iOS and Android applications</CardDescription>
+                  <CardDescription>복합 알고리즘 이해</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">What you'll learn:</h4>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• React Native Development</li>
-                      <li>• iOS & Android Deployment</li>
-                      <li>• Mobile UI/UX Design</li>
-                      <li>• App Store Optimization</li>
-                    </ul>
-                  </div>
-                  <Badge variant="secondary">14 weeks</Badge>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" />
+                      <span>App Inventor 앱 개발</span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <div className="flex items-center space-x-2">
-                    <Trophy className="h-6 w-6 text-primary" />
-                    <CardTitle>Advanced Specialization</CardTitle>
+                  <div className="flex items-center justify-between">
+                    <CardTitle>Advanced Mid</CardTitle>
+                    <Badge variant="outline">고급 1</Badge>
                   </div>
-                  <CardDescription>Master advanced topics and specialize</CardDescription>
+                  <CardDescription>실전 알고리즘 응용</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">What you'll learn:</h4>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• AI & Machine Learning</li>
-                      <li>• Cloud Computing (AWS/Azure)</li>
-                      <li>• DevOps & CI/CD</li>
-                      <li>• System Design</li>
-                    </ul>
-                  </div>
-                  <Badge variant="secondary">20 weeks</Badge>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" />
+                      <span>수학적 알고리즘 구현 (Entry)</span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle>Advanced High</CardTitle>
+                    <Badge variant="outline">고급 2</Badge>
+                  </div>
+                  <CardDescription>실전 자료구조 응용</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" />
+                      <span>자료구조, 정렬, 탐색 (Scratch)</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle>Superior</CardTitle>
+                    <Badge variant="outline">심화</Badge>
+                  </div>
+                  <CardDescription>고급 프로그래밍</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" />
+                      <span>프로그래밍 언어 기반 트레이닝</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="text-center mt-8 text-sm text-muted-foreground">
+              <p>※ 단계별로 기본 4개월의 기간이 소요되며, 학년 또는 수준에 따라서 소요 기간이 변경될 수 있습니다.</p>
             </div>
           </div>
         </section>
