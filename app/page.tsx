@@ -135,11 +135,11 @@ export default function HomePage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <Badge variant="secondary">Hello 코딩 과정</Badge>
+                <Badge variant="secondary">Hello Coding Course</Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculum</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  PCA 정규 과정인 &lt;Hello 코딩&gt; 과정은 6단계로 구성되어, 코딩의 기본이 되는 알고리즘 위에 수학,
-                  과학, 논리 등의 교과 과정을 더한 토론형 수업을 지향합니다.
+                  PCA's &lt;Hello Coding&gt; course consists of 6 levels, focusing on discussion-based classes that
+                  combine algorithms with math, science, and logic.
                 </p>
               </div>
             </div>
@@ -148,9 +148,9 @@ export default function HomePage() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle>Novice</CardTitle>
-                    <Badge variant="outline">초급</Badge>
+                    <Badge variant="outline">Beginner</Badge>
                   </div>
-                  <CardDescription>기본 알고리즘 이해</CardDescription>
+                  <CardDescription>Understanding Basic Algorithms</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
@@ -165,15 +165,15 @@ export default function HomePage() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle>Intermediate Mid</CardTitle>
-                    <Badge variant="outline">중급 1</Badge>
+                    <Badge variant="outline">Intermediate 1</Badge>
                   </div>
-                  <CardDescription>응용 알고리즘 이해</CardDescription>
+                  <CardDescription>Understanding Applied Algorithms</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-primary" />
-                      <span>PCA 자체 개발 블록 코딩</span>
+                      <span>PCA's Proprietary Block Coding</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -182,15 +182,15 @@ export default function HomePage() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle>Intermediate High</CardTitle>
-                    <Badge variant="outline">중급 2</Badge>
+                    <Badge variant="outline">Intermediate 2</Badge>
                   </div>
-                  <CardDescription>복합 알고리즘 이해</CardDescription>
+                  <CardDescription>Understanding Complex Algorithms</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-primary" />
-                      <span>App Inventor 앱 개발</span>
+                      <span>App Inventor App Development</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -199,15 +199,15 @@ export default function HomePage() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle>Advanced Mid</CardTitle>
-                    <Badge variant="outline">고급 1</Badge>
+                    <Badge variant="outline">Advanced 1</Badge>
                   </div>
-                  <CardDescription>실전 알고리즘 응용</CardDescription>
+                  <CardDescription>Practical Algorithm Application</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-primary" />
-                      <span>수학적 알고리즘 구현 (Entry)</span>
+                      <span>Mathematical Algorithms (Entry)</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -216,15 +216,15 @@ export default function HomePage() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle>Advanced High</CardTitle>
-                    <Badge variant="outline">고급 2</Badge>
+                    <Badge variant="outline">Advanced 2</Badge>
                   </div>
-                  <CardDescription>실전 자료구조 응용</CardDescription>
+                  <CardDescription>Practical Data Structure Application</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-primary" />
-                      <span>자료구조, 정렬, 탐색 (Scratch)</span>
+                      <span>Data Structures, Sorting, Search (Scratch)</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -233,22 +233,22 @@ export default function HomePage() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle>Superior</CardTitle>
-                    <Badge variant="outline">심화</Badge>
+                    <Badge variant="outline">Advanced</Badge>
                   </div>
-                  <CardDescription>고급 프로그래밍</CardDescription>
+                  <CardDescription>Advanced Programming</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-primary" />
-                      <span>프로그래밍 언어 기반 트레이닝</span>
+                      <span>Algorithm Training via Programming Languages</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
             <div className="text-center mt-8 text-sm text-muted-foreground">
-              <p>※ 단계별로 기본 4개월의 기간이 소요되며, 학년 또는 수준에 따라서 소요 기간이 변경될 수 있습니다.</p>
+              <p>※ Each level takes approx. 4 months, but can vary by student's skill and grade level.</p>
             </div>
           </div>
         </section>
