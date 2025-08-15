@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Badge } from "@/components/ui/badge"
 import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check } from "lucide-react"
 import Image from "next/image"
@@ -135,121 +136,206 @@ export default function HomePage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <Badge variant="secondary">Hello Coding Course</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculum</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculums</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  PCA's &lt;Hello Coding&gt; course consists of 6 levels, focusing on discussion-based classes that
-                  combine algorithms with math, science, and logic.
+                  We offer tailored courses for different age groups and goals. Swipe to explore our curriculums.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle>Novice</CardTitle>
-                    <Badge variant="outline">Beginner</Badge>
+            <Carousel className="w-full max-w-5xl mx-auto mt-12">
+              <CarouselContent>
+                {/* --- CURRICULUM 1: HELLO CODING --- */}
+                <CarouselItem>
+                  <div className="p-2">
+                    <div className="text-center mb-8">
+                      <Badge variant="secondary">Hello Coding Course</Badge>
+                      <p className="text-muted-foreground mt-2">
+                        A 6-level course focusing on algorithms with math, science, and logic.
+                      </p>
+                    </div>
+                    <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
+                      <Card>
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle>Novice</CardTitle>
+                            <Badge variant="outline">Beginner</Badge>
+                          </div>
+                          <CardDescription>Understanding Basic Algorithms</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Code.org / Entry / Scratch</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle>Intermediate Mid</CardTitle>
+                            <Badge variant="outline">Intermediate 1</Badge>
+                          </div>
+                          <CardDescription>Understanding Applied Algorithms</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>PCA's Proprietary Block Coding</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle>Intermediate High</CardTitle>
+                            <Badge variant="outline">Intermediate 2</Badge>
+                          </div>
+                          <CardDescription>Understanding Complex Algorithms</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>App Inventor App Development</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle>Advanced Mid</CardTitle>
+                            <Badge variant="outline">Advanced 1</Badge>
+                          </div>
+                          <CardDescription>Practical Algorithm Application</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Mathematical Algorithms (Entry)</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle>Advanced High</CardTitle>
+                            <Badge variant="outline">Advanced 2</Badge>
+                          </div>
+                          <CardDescription>Practical Data Structure Application</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Data Structures, Sorting, Search (Scratch)</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle>Superior</CardTitle>
+                            <Badge variant="outline">Advanced</Badge>
+                          </div>
+                          <CardDescription>Advanced Programming</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Algorithm Training via Programming Languages</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </div>
+                    <div className="text-center mt-8 text-sm text-muted-foreground">
+                      <p>※ Each level takes approx. 4 months, but can vary by student's skill and grade level.</p>
+                    </div>
                   </div>
-                  <CardDescription>Understanding Basic Algorithms</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span>Code.org / Entry / Scratch</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle>Intermediate Mid</CardTitle>
-                    <Badge variant="outline">Intermediate 1</Badge>
+                </CarouselItem>
+                {/* --- CURRICULUM 2: PRACTICAL CODING --- */}
+                <CarouselItem>
+                  <div className="p-2">
+                    <div className="text-center mb-8">
+                      <Badge variant="secondary">Practical Coding Course (Python)</Badge>
+                      <p className="text-muted-foreground mt-2">
+                        A 3-level course for young students focusing on Python and computer science fundamentals.
+                      </p>
+                    </div>
+                    <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Beginner</CardTitle>
+                          <CardDescription>Building a solid foundation</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Learning Basic Syntax</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Learning Computer Architecture</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Improver</CardTitle>
+                          <CardDescription>Applying skills to problems</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Learning Advanced Syntax</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Practical Syntax Application</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Skilled</CardTitle>
+                          <CardDescription>Designing complex solutions</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Algorithm Design</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <Check className="h-4 w-4 text-primary" />
+                              <span>Data Structures</span>
+                            </li>
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </div>
+                    <div className="text-center mt-8 text-sm text-muted-foreground">
+                      <p>※ Each level takes approx. 3 months, but can vary by student's skill and grade level.</p>
+                    </div>
                   </div>
-                  <CardDescription>Understanding Applied Algorithms</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span>PCA's Proprietary Block Coding</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle>Intermediate High</CardTitle>
-                    <Badge variant="outline">Intermediate 2</Badge>
-                  </div>
-                  <CardDescription>Understanding Complex Algorithms</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span>App Inventor App Development</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle>Advanced Mid</CardTitle>
-                    <Badge variant="outline">Advanced 1</Badge>
-                  </div>
-                  <CardDescription>Practical Algorithm Application</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span>Mathematical Algorithms (Entry)</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle>Advanced High</CardTitle>
-                    <Badge variant="outline">Advanced 2</Badge>
-                  </div>
-                  <CardDescription>Practical Data Structure Application</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span>Data Structures, Sorting, Search (Scratch)</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle>Superior</CardTitle>
-                    <Badge variant="outline">Advanced</Badge>
-                  </div>
-                  <CardDescription>Advanced Programming</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span>Algorithm Training via Programming Languages</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="text-center mt-8 text-sm text-muted-foreground">
-              <p>※ Each level takes approx. 4 months, but can vary by student's skill and grade level.</p>
-            </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
 
