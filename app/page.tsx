@@ -150,7 +150,7 @@ export default function HomePage() {
                     <div className="text-center mb-8">
                       <Badge variant="secondary">Hello Coding Course</Badge>
                       <p className="text-muted-foreground mt-2">
-                        A 6-level course focusing on algorithms with math, science, and logic.
+                        A 3-level course focusing on algorithms with math, science, and logic.
                       </p>
                     </div>
                     <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
@@ -201,57 +201,6 @@ export default function HomePage() {
                             <li className="flex items-center gap-2">
                               <Check className="h-4 w-4 text-primary" />
                               <span>App Inventor App Development</span>
-                            </li>
-                          </ul>
-                        </CardContent>
-                      </Card>
-                      <Card>
-                        <CardHeader>
-                          <div className="flex items-center justify-between">
-                            <CardTitle>Advanced Mid</CardTitle>
-                            <Badge variant="outline">Advanced 1</Badge>
-                          </div>
-                          <CardDescription>Practical Algorithm Application</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                          <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li className="flex items-center gap-2">
-                              <Check className="h-4 w-4 text-primary" />
-                              <span>Mathematical Algorithms (Entry)</span>
-                            </li>
-                          </ul>
-                        </CardContent>
-                      </Card>
-                      <Card>
-                        <CardHeader>
-                          <div className="flex items-center justify-between">
-                            <CardTitle>Advanced High</CardTitle>
-                            <Badge variant="outline">Advanced 2</Badge>
-                          </div>
-                          <CardDescription>Practical Data Structure Application</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                          <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li className="flex items-center gap-2">
-                              <Check className="h-4 w-4 text-primary" />
-                              <span>Data Structures, Sorting, Search (Scratch)</span>
-                            </li>
-                          </ul>
-                        </CardContent>
-                      </Card>
-                      <Card>
-                        <CardHeader>
-                          <div className="flex items-center justify-between">
-                            <CardTitle>Superior</CardTitle>
-                            <Badge variant="outline">Advanced</Badge>
-                          </div>
-                          <CardDescription>Advanced Programming</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                          <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li className="flex items-center gap-2">
-                              <Check className="h-4 w-4 text-primary" />
-                              <span>Algorithm Training via Programming Languages</span>
                             </li>
                           </ul>
                         </CardContent>
