@@ -46,44 +46,17 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black/60 -z-10" />
           <div className="relative z-10 container mx-auto px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-              <div className="flex flex-col justify-center space-y-4">
-                <Badge variant="secondary" className="mb-4 w-fit">
-                  Building Excellence from Fundamentals
-                </Badge>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-primary-foreground">
-                  Programming Coding Academy
-                </h1>
-                <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">
-                  Master coding from the ground up. Our proven methodology transforms beginners into skilled developers
-                  through solid fundamentals and hands-on practice.
-                </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg" className="h-12 px-8">
-                    Start Your Journey
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="lg" className="h-12 px-8 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10">
-                    View Curriculum
-                  </Button>
-                </div>
-              </div>
-              <div className="flex flex-col items-start space-y-8 justify-center">
-                <div className="grid gap-8 sm:grid-cols-3 lg:grid-cols-1 lg:gap-12">
-                  <div className="text-left">
-                    <div className="text-4xl font-bold text-primary">500+</div>
-                    <div className="text-sm text-primary-foreground/80">Students Graduated</div>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-4xl font-bold text-primary">95%</div>
-                    <div className="text-sm text-primary-foreground/80">Job Placement Rate</div>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-4xl font-bold text-primary">4.9/5</div>
-                    <div className="text-sm text-primary-foreground/80">Student Rating</div>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <Badge variant="secondary" className="mb-4">
+                Building Excellence from Fundamentals
+              </Badge>
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-primary-foreground">
+                Programming Coding Academy
+              </h1>
+              <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">
+                Master coding from the ground up. Our proven methodology transforms beginners into skilled developers
+                through solid fundamentals and hands-on practice.
+              </p>
             </div>
           </div>
         </section>
