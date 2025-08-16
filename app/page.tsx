@@ -50,10 +50,10 @@ export default function HomePage() {
               <Badge variant="secondary" className="mb-4">
                 Building Excellence from Fundamentals
               </Badge>
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-primary-foreground">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-primary-foreground">
                 Programming Coding Academy
               </h1>
-              <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">
+              <p className="max-w-[600px] text-primary-foreground/80 md:text-lg">
                 기초부터 탄탄하게 코딩을 마스터하세요. PCA만의 검증된 방법론은 견고한 기초와 실습을 통해 초보자를 숙련된 개발자로 성장시킵니다.
               </p>
             </div>
