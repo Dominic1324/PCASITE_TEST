@@ -36,42 +36,44 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full flex flex-col justify-center min-h-[calc(100vh-4rem)] bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <Badge variant="secondary" className="mb-4">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+              <div className="flex flex-col justify-center space-y-4">
+                <Badge variant="secondary" className="mb-4 w-fit">
                   Building Excellence from Fundamentals
                 </Badge>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none">
                   Programming Coding Academy
                 </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   Master coding from the ground up. Our proven methodology transforms beginners into skilled developers
                   through solid fundamentals and hands-on practice.
                 </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button size="lg" className="h-12 px-8">
-                  Start Your Journey
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button variant="outline" size="lg" className="h-12 px-8 bg-transparent">
-                  View Curriculum
-                </Button>
-              </div>
-              <div className="flex items-center space-x-8 pt-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground">Students Graduated</div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Button size="lg" className="h-12 px-8">
+                    Start Your Journey
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  <Button variant="outline" size="lg" className="h-12 px-8">
+                    View Curriculum
+                  </Button>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">95%</div>
-                  <div className="text-sm text-muted-foreground">Job Placement Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">4.9/5</div>
-                  <div className="text-sm text-muted-foreground">Student Rating</div>
+              </div>
+              <div className="flex flex-col items-start space-y-8 justify-center">
+                <div className="grid gap-8 sm:grid-cols-3 lg:grid-cols-1 lg:gap-12">
+                  <div className="text-left">
+                    <div className="text-4xl font-bold text-primary">500+</div>
+                    <div className="text-sm text-muted-foreground">Students Graduated</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-4xl font-bold text-primary">95%</div>
+                    <div className="text-sm text-muted-foreground">Job Placement Rate</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-4xl font-bold text-primary">4.9/5</div>
+                    <div className="text-sm text-muted-foreground">Student Rating</div>
+                  </div>
                 </div>
               </div>
             </div>
