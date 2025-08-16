@@ -72,39 +72,45 @@ export default function HomePage() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
-              <div className="grid gap-2 text-center">
-                <div className="flex justify-center items-center mb-4">
-                  <div className="rounded-full bg-primary text-primary-foreground p-4">
-                    <BookOpen className="h-8 w-8" />
+              <Card>
+                <CardContent className="flex flex-col items-center text-center p-6">
+                  <div className="flex justify-center items-center mb-4">
+                    <div className="rounded-full bg-primary text-primary-foreground p-4">
+                      <BookOpen className="h-8 w-8" />
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold">Fundamental-First</h3>
-                <p className="text-sm text-muted-foreground">
-                  특정 프레임워크 사용법만이 아닌, 핵심 개념, 자료구조, 알고리즘에 집중하여 어떤 문제든 해결할 수 있는 능력을 기릅니다.
-                </p>
-              </div>
-              <div className="grid gap-2 text-center">
-                <div className="flex justify-center items-center mb-4">
-                  <div className="rounded-full bg-primary text-primary-foreground p-4">
-                    <Users className="h-8 w-8" />
+                  <h3 className="text-xl font-bold mb-2">Fundamental-First</h3>
+                  <p className="text-sm text-muted-foreground">
+                    특정 프레임워크 사용법만이 아닌, 핵심 개념, 자료구조, 알고리즘에 집중하여 어떤 문제든 해결할 수 있는 능력을 기릅니다.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center text-center p-6">
+                  <div className="flex justify-center items-center mb-4">
+                    <div className="rounded-full bg-primary text-primary-foreground p-4">
+                      <Users className="h-8 w-8" />
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold">Mentorship-Driven</h3>
-                <p className="text-sm text-muted-foreground">
-                  경험 많은 강사진이 학습 과정과 커리어 설계에 대한 개인별 맞춤 가이드와 멘토십을 제공합니다.
-                </p>
-              </div>
-              <div className="grid gap-2 text-center">
-                <div className="flex justify-center items-center mb-4">
-                  <div className="rounded-full bg-primary text-primary-foreground p-4">
-                    <Trophy className="h-8 w-8" />
+                  <h3 className="text-xl font-bold mb-2">Mentorship-Driven</h3>
+                  <p className="text-sm text-muted-foreground">
+                    경험 많은 강사진이 학습 과정과 커리어 설계에 대한 개인별 맞춤 가이드와 멘토십을 제공합니다.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center text-center p-6">
+                  <div className="flex justify-center items-center mb-4">
+                    <div className="rounded-full bg-primary text-primary-foreground p-4">
+                      <Trophy className="h-8 w-8" />
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold">Career-Oriented</h3>
-                <p className="text-sm text-muted-foreground">
-                  코딩 교육을 넘어, 포트폴리오 리뷰, 모의 면접, 그리고 업계와의 네트워킹을 통해 성공적인 취업을 지원합니다.
-                </p>
-              </div>
+                  <h3 className="text-xl font-bold mb-2">Career-Oriented</h3>
+                  <p className="text-sm text-muted-foreground">
+                    코딩 교육을 넘어, 포트폴리오 리뷰, 모의 면접, 그리고 업계와의 네트워킹을 통해 성공적인 취업을 지원합니다.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
