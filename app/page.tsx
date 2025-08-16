@@ -54,8 +54,7 @@ export default function HomePage() {
                 Programming Coding Academy
               </h1>
               <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">
-                Master coding from the ground up. Our proven methodology transforms beginners into skilled developers
-                through solid fundamentals and hands-on practice.
+                기초부터 탄탄하게 코딩을 마스터하세요. PCA만의 검증된 방법론은 견고한 기초와 실습을 통해 초보자를 숙련된 개발자로 성장시킵니다.
               </p>
             </div>
           </div>
@@ -68,8 +67,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About PCA</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We believe that a strong foundation is the key to becoming a truly great developer. Our curriculum is
-                  designed to build excellence from the ground up.
+                  훌륭한 개발자의 핵심은 강력한 기초에 있다고 믿습니다. 우리의 커리큘럼은 처음부터 탁월함을 목표로 설계되었습니다.
                 </p>
               </div>
             </div>
@@ -82,8 +80,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold">Fundamental-First</h3>
                 <p className="text-sm text-muted-foreground">
-                  We focus on core concepts, data structures, and algorithms to ensure you can tackle any problem, not
-                  just use a specific framework.
+                  특정 프레임워크 사용법만이 아닌, 핵심 개념, 자료구조, 알고리즘에 집중하여 어떤 문제든 해결할 수 있는 능력을 기릅니다.
                 </p>
               </div>
               <div className="grid gap-2 text-center">
@@ -94,8 +91,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold">Mentorship-Driven</h3>
                 <p className="text-sm text-muted-foreground">
-                  Our experienced instructors provide personalized guidance and mentorship to help you navigate your
-                  learning journey and career path.
+                  경험 많은 강사진이 학습 과정과 커리어 설계에 대한 개인별 맞춤 가이드와 멘토십을 제공합니다.
                 </p>
               </div>
               <div className="grid gap-2 text-center">
@@ -106,8 +102,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold">Career-Oriented</h3>
                 <p className="text-sm text-muted-foreground">
-                  Beyond coding, we prepare you for the job market with portfolio reviews, interview prep, and
-                  connections to the tech industry.
+                  코딩 교육을 넘어, 포트폴리오 리뷰, 모의 면접, 그리고 업계와의 네트워킹을 통해 성공적인 취업을 지원합니다.
                 </p>
               </div>
             </div>
@@ -121,7 +116,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculums</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer tailored courses for different age groups and goals. Swipe to explore our curriculums.
+                  다양한 연령과 목표에 맞춘 코스를 제공합니다. 옆으로 넘겨서 다른 커리큘럼을 확인해 보세요.
                 </p>
               </div>
             </div>
@@ -133,7 +128,7 @@ export default function HomePage() {
                     <div className="text-center mb-8">
                       <Badge variant="secondary">Hello Coding Course</Badge>
                       <p className="text-muted-foreground mt-2">
-                        A 3-level course focusing on algorithms with math, science, and logic.
+                        알고리즘과 수학, 과학, 논리를 결합한 3단계 토론 중심 과정입니다.
                       </p>
                     </div>
                     <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
@@ -190,7 +185,7 @@ export default function HomePage() {
                       </Card>
                     </div>
                     <div className="text-center mt-8 text-sm text-muted-foreground">
-                      <p>※ Each level takes approx. 4 months, but can vary by student's skill and grade level.</p>
+                      <p>※ 각 레벨은 약 4개월이 소요되며, 학생의 실력과 학년에 따라 기간이 달라질 수 있습니다.</p>
                     </div>
                   </div>
                 </CarouselItem>
@@ -200,7 +195,7 @@ export default function HomePage() {
                     <div className="text-center mb-8">
                       <Badge variant="secondary">Practical Coding Course (Python)</Badge>
                       <p className="text-muted-foreground mt-2">
-                        A 3-level course for young students focusing on Python and computer science fundamentals.
+                        어린 학생들을 위한 과정으로, 파이썬과 컴퓨터 과학의 기초에 중점을 둔 3단계 과정입니다.
                       </p>
                     </div>
                     <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
@@ -260,7 +255,7 @@ export default function HomePage() {
                       </Card>
                     </div>
                     <div className="text-center mt-8 text-sm text-muted-foreground">
-                      <p>※ Each level takes approx. 3 months, but can vary by student's skill and grade level.</p>
+                      <p>※ 각 레벨은 약 3개월이 소요되며, 학생의 실력과 학년에 따라 기간이 달라질 수 있습니다.</p>
                     </div>
                   </div>
                 </CarouselItem>
@@ -278,7 +273,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Student Achievements</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Showcasing the incredible projects and achievements of our students.
+                  우리 학생들의 놀라운 프로젝트와 성과를 확인해 보세요.
                 </p>
               </div>
             </div>
@@ -296,7 +291,7 @@ export default function HomePage() {
                 <CardContent>
                   <CardTitle className="mb-2">E-Commerce Platform</CardTitle>
                   <CardDescription className="mb-4">
-                    Full-stack e-commerce solution built with React and Node.js by Alex Chen (Age 16)
+                    React와 Node.js로 제작한 풀스택 이커머스 솔루션. (제작: Alex Chen, 16세)
                   </CardDescription>
                   <div className="flex items-center space-x-2">
                     <Button variant="outline" size="sm">
@@ -323,7 +318,7 @@ export default function HomePage() {
                 <CardContent>
                   <CardTitle className="mb-2">AI Study Assistant</CardTitle>
                   <CardDescription className="mb-4">
-                    Machine learning-powered study app created by Maria Rodriguez (Age 17)
+                    머신러닝 기반의 학습 보조 앱. (제작: Maria Rodriguez, 17세)
                   </CardDescription>
                   <div className="flex items-center space-x-2">
                     <Button variant="outline" size="sm">
@@ -350,7 +345,7 @@ export default function HomePage() {
                 <CardContent>
                   <CardTitle className="mb-2">Mobile Fitness Tracker</CardTitle>
                   <CardDescription className="mb-4">
-                    Cross-platform fitness app developed by James Park (Age 15)
+                    크로스플랫폼 피트니스 앱. (제작: James Park, 15세)
                   </CardDescription>
                   <div className="flex items-center space-x-2">
                     <Button variant="outline" size="sm">
@@ -375,7 +370,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Updates</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Stay updated with our latest achievements, new courses, and student success stories.
+                  PCA의 최신 성과, 새로운 과정, 학생들의 성공 스토리를 확인하세요.
                 </p>
               </div>
             </div>
@@ -390,8 +385,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Introducing our comprehensive AI/ML curriculum designed for the next generation of developers.
-                    Starting January 2025.
+                    차세대 개발자를 위해 설계된 종합 AI/ML 커리큘럼을 소개합니다. 2025년 1월 시작.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -405,8 +399,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Sarah Kim, our full-stack development student, secured 1st place in the National Youth Programming
-                    Contest.
+                    풀스택 개발 과정의 Sarah Kim 학생이 전국 청소년 프로그래밍 대회에서 1위를 차지했습니다.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -420,8 +413,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    New partnerships with leading tech companies provide direct internship and job opportunities for our
-                    graduates.
+                    유수 테크 기업들과의 새로운 파트너십을 통해 졸업생들에게 인턴십과 취업 기회를 제공합니다.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -436,8 +428,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Start Your Journey?</h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join hundreds of students who have transformed their futures through coding. Start with strong
-                  fundamentals and achieve extraordinary results.
+                  코딩으로 미래를 바꾼 수백 명의 학생들과 함께하세요. 탄탄한 기초에서 시작하여 놀라운 결과를 만들어 보세요.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -465,13 +456,13 @@ export default function HomePage() {
         </p>
         <nav className="flex gap-4 sm:gap-6">
           <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Privacy Policy
+            개인정보처리방침
           </Link>
           <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Terms of Service
+            이용약관
           </Link>
           <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Contact
+            문의하기
           </Link>
         </nav>
       </footer>
