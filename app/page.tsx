@@ -290,8 +290,6 @@ export default function HomePage() {
                 )}
               </div>
             </div>
-          </div>
-        </section>
 
         {/* Student Achievements */}
         <section id="achievements" className="w-full py-12 md:py-24 lg:py-32">
