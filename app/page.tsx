@@ -71,41 +71,41 @@ export default function HomePage() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
-              <Card className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+              <Card className="group transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#283890]">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
-                    <div className="rounded-full bg-primary text-primary-foreground p-4">
+                    <div className="rounded-full bg-primary text-primary-foreground p-4 group-hover:bg-[#fef100] group-hover:text-[#283890]">
                       <Brain className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Computational Thinking</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">Computational Thinking</h3>
+                  <p className="text-sm text-muted-foreground group-hover:text-[#fef100]">
                     스스로 컴퓨팅적 사고를 할 수 있는 힘을 길러줍니다.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+              <Card className="group transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#283890]">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
-                    <div className="rounded-full bg-primary text-primary-foreground p-4">
+                    <div className="rounded-full bg-primary text-primary-foreground p-4 group-hover:bg-[#fef100] group-hover:text-[#283890]">
                       <GitMerge className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Algorithm</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">Algorithm</h3>
+                  <p className="text-sm text-muted-foreground group-hover:text-[#fef100]">
                     열린 사고를 지향하고, 알고리즘을 만드는 방법을 알려줍니다.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+              <Card className="group transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#283890]">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
-                    <div className="rounded-full bg-primary text-primary-foreground p-4">
+                    <div className="rounded-full bg-primary text-primary-foreground p-4 group-hover:bg-[#fef100] group-hover:text-[#283890]">
                       <Building className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Architecture</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">Architecture</h3>
+                  <p className="text-sm text-muted-foreground group-hover:text-[#fef100]">
                     기술로써의 코딩이 아닌 아키텍처를 구성하는 원리를 전달합니다.
                   </p>
                 </CardContent>
