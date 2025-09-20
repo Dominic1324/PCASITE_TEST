@@ -1,13 +1,35 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client";
 
-import { Badge } from "@/components/ui/badge"
-import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check, Brain, GitMerge, Building } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check, Brain, GitMerge, Building, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
+  const [level, setLevel] = useState('elementary');
+
+  const levels = ['elementary', 'middle', 'high'];
+  const levelNames = {
+    elementary: '초등',
+    middle: '중등',
+    high: '고등'
+  };
+
+  const handleNext = () => {
+    const currentIndex = levels.indexOf(level);
+    const nextIndex = (currentIndex + 1) % levels.length;
+    setLevel(levels[nextIndex]);
+  };
+
+  const handlePrev = () => {
+    const currentIndex = levels.indexOf(level);
+    const prevIndex = (currentIndex - 1 + levels.length) % levels.length;
+    setLevel(levels[prevIndex]);
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -126,13 +148,17 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <Tabs defaultValue="elementary" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="elementary">초등</TabsTrigger>
-                <TabsTrigger value="middle">중등</TabsTrigger>
-                <TabsTrigger value="high">고등</TabsTrigger>
-              </TabsList>
-              <TabsContent value="elementary">
+            <div className="relative">
+              <div className="flex justify-center items-center mb-8">
+                <Button variant="ghost" size="icon" onClick={handlePrev}>
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
+                <h3 className="text-2xl font-bold mx-8">{levelNames[level]}</h3>
+                <Button variant="ghost" size="icon" onClick={handleNext}>
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
+              </div>
+              {level === 'elementary' && (
                 <div className="grid md:grid-cols-3 gap-8 mt-8">
                   <div className="relative group">
                     <Image
@@ -174,18 +200,18 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </TabsContent>
-              <TabsContent value="middle">
+              )}
+              {level === 'middle' && (
                 <div className="text-center py-12">
                   <p className="text-muted-foreground">중등 커리큘럼은 현재 준비중입니다.</p>
                 </div>
-              </TabsContent>
-              <TabsContent value="high">
+              )}
+              {level === 'high' && (
                 <div className="text-center py-12">
                   <p className="text-muted-foreground">고등 커리큘럼은 현재 준비중입니다.</p>
                 </div>
-              </TabsContent>
-            </Tabs>
+              )}
+            </div>
           </div>
         </section>
 
@@ -390,5 +416,5 @@ export default function HomePage() {
         </nav>
       </footer>
     </div>
-  )
+  );
 }
