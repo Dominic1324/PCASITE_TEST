@@ -71,7 +71,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
-              <Card>
+              <Card className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4">
@@ -84,7 +84,7 @@ export default function HomePage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4">
@@ -97,7 +97,7 @@ export default function HomePage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4">
