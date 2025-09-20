@@ -149,9 +149,15 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <Button variant="ghost" size="icon" onClick={handlePrev} className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
-                <ChevronLeft className="h-8 w-8" />
-              </Button>
+              <div className="flex justify-center items-center mb-8">
+                <Button variant="ghost" size="icon" onClick={handlePrev}>
+                  <ChevronLeft className="h-8 w-8" />
+                </Button>
+                <h3 className="text-2xl font-bold mx-8">{levelNames[level]}</h3>
+                <Button variant="ghost" size="icon" onClick={handleNext}>
+                  <ChevronRight className="h-8 w-8" />
+                </Button>
+              </div>
               <div className="flex justify-center">
                 {level === 'elementary' && (
                   <div className="grid md:grid-cols-3 gap-8 mt-8">
@@ -283,9 +289,6 @@ export default function HomePage() {
                   </div>
                 )}
               </div>
-              <Button variant="ghost" size="icon" onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 z-10">
-                <ChevronRight className="h-8 w-8" />
-              </Button>
             </div>
           </div>
         </section>
