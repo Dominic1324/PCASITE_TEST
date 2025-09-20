@@ -453,7 +453,8 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <div className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="PCA Logo" width={80} height={32} />
+          <Code className="h-5 w-5 text-primary" />
+          <span className="font-semibold">PCA</span>
         </div>
         <p className="text-xs text-muted-foreground sm:ml-auto">
           © 2024 Programming Coding Academy. All rights reserved.
