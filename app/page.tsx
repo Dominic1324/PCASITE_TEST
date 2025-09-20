@@ -66,7 +66,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About PCA</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  훌륭한 개발자의 핵심은 강력한 기초에 있다고 믿습니다. 우리의 커리큘럼은 처음부터 탁월함을 목표로 설계되었습니다.
+                  PCA는 코딩을 통해 생각하는 방법을 가르칩니다
                 </p>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculums</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  다양한 연령과 목표에 맞춘 코스를 제공합니다. 옆으로 넘겨서 다른 커리큘럼을 확인해 보세요.
+                  PCA는 학생들의 연령/수준/적성에 맞는 코스를 체계적으로 제공합니다
                 </p>
               </div>
             </div>
@@ -278,7 +278,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Student Achievements</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  우리 학생들의 놀라운 프로젝트와 성과를 확인해 보세요.
+                  PCA는 학생들마다 확실한 결과를 만들어냅니다
                 </p>
               </div>
             </div>
@@ -375,7 +375,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Latest Updates</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  PCA의 최신 성과, 새로운 과정, 학생들의 성공 스토리를 확인하세요.
+                  PCA의 최신 성과, 새로운 과정, 학생들의 성공 스토리를 확인하세요
                 </p>
               </div>
             </div>
@@ -453,8 +453,8 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <div className="flex items-center space-x-2">
-          <Code className="h-5 w-5 text-primary" />
-          <span className="font-semibold">PCA</span>
+          {/* <Code className="h-5 w-5 text-primary" />
+          <span className="font-semibold">PCA</span> */}
         </div>
         <p className="text-xs text-muted-foreground sm:ml-auto">
           © 2024 Programming Coding Academy. All rights reserved.
