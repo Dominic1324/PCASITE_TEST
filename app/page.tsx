@@ -148,16 +148,10 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="flex justify-center items-center mb-8">
-                <Button variant="ghost" size="icon" onClick={handlePrev}>
-                  <ChevronLeft className="h-6 w-6" />
-                </Button>
-                <h3 className="text-2xl font-bold mx-8">{levelNames[level]}</h3>
-                <Button variant="ghost" size="icon" onClick={handleNext}>
-                  <ChevronRight className="h-6 w-6" />
-                </Button>
-              </div>
+            <div className="relative flex items-center justify-center"> {/* Added flex and justify-center */}
+              <Button variant="ghost" size="icon" onClick={handlePrev} className="absolute left-0 z-10"> {/* Positioned arrows */}
+                <ChevronLeft className="h-8 w-8" />
+              </Button>
               {level === 'elementary' && (
                 <div className="grid md:grid-cols-3 gap-8 mt-8">
                   <div className="relative group">
@@ -211,6 +205,9 @@ export default function HomePage() {
                   <p className="text-muted-foreground">고등 커리큘럼은 현재 준비중입니다.</p>
                 </div>
               )}
+              <Button variant="ghost" size="icon" onClick={handleNext} className="absolute right-0 z-10"> {/* Positioned arrows */}
+                <ChevronRight className="h-8 w-8" />
+              </Button>
             </div>
           </div>
         </section>
