@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { Badge } from "@/components/ui/badge"
 import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check, Brain, GitMerge, Building } from "lucide-react"
@@ -115,8 +116,8 @@ export default function HomePage() {
         </section>
 
         {/* Curriculum */}
-        <section id="curriculum" className="w-full">
-          <div className="container mx-auto px-4 md:px-6 py-12 md:py-24 lg:py-32">
+        <section id="curriculum" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculums</h2>
@@ -125,84 +126,72 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Novice */}
-          <div className="w-full min-h-screen flex items-center justify-center bg-muted/50">
-            <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex justify-center">
-                <Image
-                  src="/헬로코딩 노비스 스텝1_홀로그램.jpg"
-                  alt="Hello Coding Novice"
-                  width={500}
-                  height={700}
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="space-y-4">
-                <Badge variant="secondary">Hello Coding Course</Badge>
-                <h3 className="text-3xl font-bold">Novice</h3>
-                <p className="text-muted-foreground">Understanding Basic Algorithms</p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-primary" />
-                    <span>Code.org / Entry / Scratch</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Intermediate Mid */}
-          <div className="w-full min-h-screen flex items-center justify-center">
-            <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex justify-center">
-                <Image
-                  src="/헬로코딩_IM_step1_홀로그램.jpg"
-                  alt="Hello Coding Intermediate Mid"
-                  width={500}
-                  height={700}
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="space-y-4">
-                <Badge variant="secondary">Hello Coding Course</Badge>
-                <h3 className="text-3xl font-bold">Intermediate Mid</h3>
-                <p className="text-muted-foreground">Understanding Applied Algorithms</p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-primary" />
-                    <span>PCA's Proprietary Block Coding</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Intermediate High */}
-          <div className="w-full min-h-screen flex items-center justify-center bg-muted/50">
-            <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
-              <div className="flex justify-center">
-                <Image
-                  src="/헬로코딩_IH_step1_홀로그램.jpg"
-                  alt="Hello Coding Intermediate High"
-                  width={500}
-                  height={700}
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="space-y-4">
-                <Badge variant="secondary">Hello Coding Course</Badge>
-                <h3 className="text-3xl font-bold">Intermediate High</h3>
-                <p className="text-muted-foreground">Understanding Complex Algorithms</p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-primary" />
-                    <span>App Inventor App Development</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <Tabs defaultValue="elementary" className="w-full">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="elementary">초등</TabsTrigger>
+                <TabsTrigger value="middle">중등</TabsTrigger>
+                <TabsTrigger value="high">고등</TabsTrigger>
+              </TabsList>
+              <TabsContent value="elementary">
+                <div className="grid md:grid-cols-3 gap-8 mt-8">
+                  <Card>
+                    <CardHeader>
+                      <Image
+                        src="/hello-coding-novice.jpg"
+                        alt="Hello Coding Novice"
+                        width={500}
+                        height={700}
+                        className="rounded-lg"
+                      />
+                    </CardHeader>
+                    <CardContent>
+                      <CardTitle>Hello Coding - Novice</CardTitle>
+                      <CardDescription>Understanding Basic Algorithms</CardDescription>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader>
+                      <Image
+                        src="/hello-coding-im.jpg"
+                        alt="Hello Coding Intermediate Mid"
+                        width={500}
+                        height={700}
+                        className="rounded-lg"
+                      />
+                    </CardHeader>
+                    <CardContent>
+                      <CardTitle>Hello Coding - Intermediate Mid</CardTitle>
+                      <CardDescription>Understanding Applied Algorithms</CardDescription>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader>
+                      <Image
+                        src="/hello-coding-ih.jpg"
+                        alt="Hello Coding Intermediate High"
+                        width={500}
+                        height={700}
+                        className="rounded-lg"
+                      />
+                    </CardHeader>
+                    <CardContent>
+                      <CardTitle>Hello Coding - Intermediate High</CardTitle>
+                      <CardDescription>Understanding Complex Algorithms</CardDescription>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
+              <TabsContent value="middle">
+                <div className="text-center py-12">
+                  <p className="text-muted-foreground">중등 커리큘럼은 현재 준비중입니다.</p>
+                </div>
+              </TabsContent>
+              <TabsContent value="high">
+                <div className="text-center py-12">
+                  <p className="text-muted-foreground">고등 커리큘럼은 현재 준비중입니다.</p>
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
 
