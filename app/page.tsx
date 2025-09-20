@@ -134,51 +134,45 @@ export default function HomePage() {
               </TabsList>
               <TabsContent value="elementary">
                 <div className="grid md:grid-cols-3 gap-8 mt-8">
-                  <Card>
-                    <CardHeader>
-                      <Image
-                        src="/hello-coding-novice.jpg"
-                        alt="Hello Coding Novice"
-                        width={500}
-                        height={700}
-                        className="rounded-lg"
-                      />
-                    </CardHeader>
-                    <CardContent>
-                      <CardTitle>Hello Coding - Novice</CardTitle>
-                      <CardDescription>Understanding Basic Algorithms</CardDescription>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardHeader>
-                      <Image
-                        src="/hello-coding-im.jpg"
-                        alt="Hello Coding Intermediate Mid"
-                        width={500}
-                        height={700}
-                        className="rounded-lg"
-                      />
-                    </CardHeader>
-                    <CardContent>
-                      <CardTitle>Hello Coding - Intermediate Mid</CardTitle>
-                      <CardDescription>Understanding Applied Algorithms</CardDescription>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardHeader>
-                      <Image
-                        src="/hello-coding-ih.jpg"
-                        alt="Hello Coding Intermediate High"
-                        width={500}
-                        height={700}
-                        className="rounded-lg"
-                      />
-                    </CardHeader>
-                    <CardContent>
-                      <CardTitle>Hello Coding - Intermediate High</CardTitle>
-                      <CardDescription>Understanding Complex Algorithms</CardDescription>
-                    </CardContent>
-                  </Card>
+                  <div className="relative group">
+                    <Image
+                      src="/hello-coding-novice.jpg"
+                      alt="Hello Coding Novice"
+                      width={500}
+                      height={700}
+                      className="rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 className="text-white text-lg font-bold">Hello Coding - Novice</h3>
+                      <p className="text-white text-sm">Understanding Basic Algorithms</p>
+                    </div>
+                  </div>
+                  <div className="relative group">
+                    <Image
+                      src="/hello-coding-im.jpg"
+                      alt="Hello Coding Intermediate Mid"
+                      width={500}
+                      height={700}
+                      className="rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 className="text-white text-lg font-bold">Hello Coding - Intermediate Mid</h3>
+                      <p className="text-white text-sm">Understanding Applied Algorithms</p>
+                    </div>
+                  </div>
+                  <div className="relative group">
+                    <Image
+                      src="/hello-coding-ih.jpg"
+                      alt="Hello Coding Intermediate High"
+                      width={500}
+                      height={700}
+                      className="rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 className="text-white text-lg font-bold">Hello Coding - Intermediate High</h3>
+                      <p className="text-white text-sm">Understanding Complex Algorithms</p>
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
               <TabsContent value="middle">
