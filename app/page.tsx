@@ -165,8 +165,8 @@ export default function HomePage() {
                       <Image
                         src="/hello-coding-novice.jpg"
                         alt="Hello Coding Novice"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -178,8 +178,8 @@ export default function HomePage() {
                       <Image
                         src="/hello-coding-im.jpg"
                         alt="Hello Coding Intermediate Mid"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -191,8 +191,8 @@ export default function HomePage() {
                       <Image
                         src="/hello-coding-ih.jpg"
                         alt="Hello Coding Intermediate High"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -208,8 +208,8 @@ export default function HomePage() {
                       <Image
                         src="/placeholder.jpg"
                         alt="Middle School Curriculum 1"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -221,8 +221,8 @@ export default function HomePage() {
                       <Image
                         src="/placeholder.jpg"
                         alt="Middle School Curriculum 2"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -234,8 +234,8 @@ export default function HomePage() {
                       <Image
                         src="/placeholder.jpg"
                         alt="Middle School Curriculum 3"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -251,8 +251,8 @@ export default function HomePage() {
                       <Image
                         src="/placeholder.jpg"
                         alt="High School Curriculum 1"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -264,8 +264,8 @@ export default function HomePage() {
                       <Image
                         src="/placeholder.jpg"
                         alt="High School Curriculum 2"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -277,8 +277,8 @@ export default function HomePage() {
                       <Image
                         src="/placeholder.jpg"
                         alt="High School Curriculum 3"
-                        width={400}
-                        height={560}
+                        width={300}
+                        height={420}
                         className="rounded-lg"
                       />
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
