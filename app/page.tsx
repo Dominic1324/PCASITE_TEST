@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Badge } from "@/components/ui/badge"
-import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check } from "lucide-react"
+import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check, Brain, GitMerge, Building } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -75,12 +75,12 @@ export default function HomePage() {
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4">
-                      <BookOpen className="h-8 w-8" />
+                      <Brain className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Fundamental-First</h3>
+                  <h3 className="text-xl font-bold mb-2">Computational Thinking</h3>
                   <p className="text-sm text-muted-foreground">
-                    특정 프레임워크 사용법만이 아닌, 핵심 개념, 자료구조, 알고리즘에 집중하여 어떤 문제든 해결할 수 있는 능력을 기릅니다.
+                    스스로 컴퓨팅적 사고를 할 수 있는 힘을 길러줍니다.
                   </p>
                 </CardContent>
               </Card>
@@ -88,12 +88,12 @@ export default function HomePage() {
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4">
-                      <Users className="h-8 w-8" />
+                      <GitMerge className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Mentorship-Driven</h3>
+                  <h3 className="text-xl font-bold mb-2">Algorithm</h3>
                   <p className="text-sm text-muted-foreground">
-                    경험 많은 강사진이 학습 과정과 커리어 설계에 대한 개인별 맞춤 가이드와 멘토십을 제공합니다.
+                    열린 사고를 지향하고, 알고리즘을 만드는 방법을 알려줍니다.
                   </p>
                 </CardContent>
               </Card>
@@ -101,12 +101,12 @@ export default function HomePage() {
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4">
-                      <Trophy className="h-8 w-8" />
+                      <Building className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Career-Oriented</h3>
+                  <h3 className="text-xl font-bold mb-2">Architecture</h3>
                   <p className="text-sm text-muted-foreground">
-                    코딩 교육을 넘어, 포트폴리오 리뷰, 모의 면접, 그리고 업계와의 네트워킹을 통해 성공적인 취업을 지원합니다.
+                    기술로써의 코딩이 아닌 아키텍처를 구성하는 원리를 전달합니다.
                   </p>
                 </CardContent>
               </Card>
