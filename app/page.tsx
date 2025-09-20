@@ -149,7 +149,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="flex justify-center items-center mb-8">
+              <div className="flex justify-center items-center mb-4">
                 <Button variant="ghost" size="icon" onClick={handlePrev}>
                   <ChevronLeft className="h-8 w-8" />
                 </Button>
