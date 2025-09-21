@@ -9,10 +9,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
-  const [level, setLevel] = useState('elementary');
+  type Level = 'elementary' | 'middle' | 'high';
+  const [level, setLevel] = useState<Level>('elementary');
 
-  const levels = ['elementary', 'middle', 'high'];
-  const levelNames = {
+  const levels: Level[] = ['elementary', 'middle', 'high'];
+  const levelNames: { [key in Level]: string } = {
     elementary: '초등',
     middle: '중등',
     high: '고등'
@@ -290,6 +291,8 @@ export default function HomePage() {
                 )}
               </div>
             </div>
+          </div>
+        </section>
 
         {/* Student Achievements */}
         <section id="achievements" className="w-full py-12 md:py-24 lg:py-32">
