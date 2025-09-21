@@ -7,14 +7,13 @@ import { Badge } from "@/components/ui/badge";
 import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check, Brain, GitMerge, Building, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { clsx } from "clsx";
 
 const curriculumData = [
   {
     id: '01',
     level: '초등 과정',
     title: '컴퓨팅 사고력과 창의력 증진',
-    description: '블록 코딩부터 시작하여 알고리즘의 기본 원리를 배우고, 간단한 게임과 애니메이션을 만들며 창의력을 키웁니다.'
+    description: '블록 코딩부터 시작하여 알고리즘의 기본 원리를 배우고, 간단한 게임과 애니메이션을 만들며 논리적 사고와 창의력을 키웁니다.'
   },
   {
     id: '02',
@@ -30,6 +29,18 @@ const curriculumData = [
   },
 ];
 
+// Helper function to calculate circular offset
+const getCircularOffset = (index: number, activeIndex: number, count: number) => {
+  const diff = index - activeIndex;
+  if (Math.abs(diff) <= count / 2) {
+    return diff;
+  }
+  if (diff > 0) {
+    return diff - count;
+  }
+  return diff + count;
+};
+
 export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -44,8 +55,9 @@ export default function HomePage() {
   const activeCurriculum = curriculumData[activeIndex];
 
   const getCardStyle = (index: number) => {
-    const offset = index - activeIndex;
-    const translateXValue = offset * 40;
+    const offset = getCircularOffset(index, activeIndex, curriculumData.length);
+    
+    const translateXValue = offset * 40; // e.g., -40%, 0%, 40%
     const scaleValue = offset === 0 ? 1.1 : 0.9;
     const opacityValue = offset === 0 ? 1 : 0.6;
     const zIndexValue = offset === 0 ? 10 : 0;
@@ -56,6 +68,7 @@ export default function HomePage() {
       opacity: opacityValue,
       zIndex: zIndexValue,
       filter: blurValue,
+      position: 'absolute' as const,
     };
   };
 
@@ -159,7 +172,7 @@ export default function HomePage() {
               </div>
               <div className="relative h-[400px] flex items-center justify-center">
                 {curriculumData.map((item, index) => (
-                  <div key={item.id} className="absolute w-3/5 transition-all duration-500 ease-in-out" style={getCardStyle(index)}>
+                  <div key={item.id} className="w-3/5 transition-all duration-500 ease-in-out" style={getCardStyle(index)}>
                     <Card className="h-[350px]">
                       <CardContent className="p-6">
                         {/* Empty as requested */}
@@ -187,10 +200,40 @@ export default function HomePage() {
                   <Image src="/placeholder.svg?height=200&width=400" width={400} height={200} alt="Student Project" className="rounded-lg object-cover w-full h-48" />
                 </CardHeader>
                 <CardContent>
-                  {/* ... Omitted for brevity ... */}
+                  <CardTitle>E-Commerce Platform</CardTitle>
+                  <CardDescription>React와 Node.js로 제작한 풀스택 이커머스 솔루션. (제작: Alex Chen, 16세)</CardDescription>
+                  <div className="flex items-center space-x-2">
+                    <Button variant="outline" size="sm"><Github className="h-4 w-4 mr-2" />Code</Button>
+                    <Button variant="outline" size="sm"><ExternalLink className="h-4 w-4 mr-2" />Live Demo</Button>
+                  </div>
                 </CardContent>
               </Card>
-              {/* ... Other cards ... */}
+              <Card>
+                <CardHeader>
+                  <Image src="/placeholder.svg?height=200&width=400" width={400} height={200} alt="Student Project" className="rounded-lg object-cover w-full h-48" />
+                </CardHeader>
+                <CardContent>
+                  <CardTitle>AI Study Assistant</CardTitle>
+                  <CardDescription>머신러닝 기반의 학습 보조 앱. (제작: Maria Rodriguez, 17세)</CardDescription>
+                  <div className="flex items-center space-x-2">
+                    <Button variant="outline" size="sm"><Github className="h-4 w-4 mr-2" />Code</Button>
+                    <Button variant="outline" size="sm"><ExternalLink className="h-4 w-4 mr-2" />Live Demo</Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <Image src="/placeholder.svg?height=200&width=400" width={400} height={200} alt="Student Project" className="rounded-lg object-cover w-full h-48" />
+                </CardHeader>
+                <CardContent>
+                  <CardTitle>Mobile Fitness Tracker</CardTitle>
+                  <CardDescription>크로스플랫폼 피트니스 앱. (제작: James Park, 15세)</CardDescription>
+                  <div className="flex items-center space-x-2">
+                    <Button variant="outline" size="sm"><Github className="h-4 w-4 mr-2" />Code</Button>
+                    <Button variant="outline" size="sm"><ExternalLink className="h-4 w-4 mr-2" />Live Demo</Button>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
