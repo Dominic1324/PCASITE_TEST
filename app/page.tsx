@@ -79,12 +79,25 @@ export default function HomePage() {
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4 group-hover:bg-[#fef100] group-hover:text-[#283890]">
+                      <BookOpen className="h-8 w-8" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">생기부</h3>
+                  <p className="text-sm text-muted-foreground group-hover:text-[#fef100]">
+                    수행평가, 학종 포트폴리오
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="group transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#283890]">
+                <CardContent className="flex flex-col items-center text-center p-6">
+                  <div className="flex justify-center items-center mb-4">
+                    <div className="rounded-full bg-primary text-primary-foreground p-4 group-hover:bg-[#fef100] group-hover:text-[#283890]">
                       <Brain className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">Computational Thinking</h3>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">EC/AP</h3>
                   <p className="text-sm text-muted-foreground group-hover:text-[#fef100]">
-                    스스로 컴퓨팅적 사고를 할 수 있는 힘을 길러줍니다.
+                    AI 기술 앱 개발
                   </p>
                 </CardContent>
               </Card>
@@ -92,25 +105,12 @@ export default function HomePage() {
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <div className="flex justify-center items-center mb-4">
                     <div className="rounded-full bg-primary text-primary-foreground p-4 group-hover:bg-[#fef100] group-hover:text-[#283890]">
-                      <GitMerge className="h-8 w-8" />
+                      <Trophy className="h-8 w-8" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">Algorithm</h3>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">대회</h3>
                   <p className="text-sm text-muted-foreground group-hover:text-[#fef100]">
-                    열린 사고를 지향하고, 알고리즘을 만드는 방법을 알려줍니다.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="group transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-[#283890]">
-                <CardContent className="flex flex-col items-center text-center p-6">
-                  <div className="flex justify-center items-center mb-4">
-                    <div className="rounded-full bg-primary text-primary-foreground p-4 group-hover:bg-[#fef100] group-hover:text-[#283890]">
-                      <Building className="h-8 w-8" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#fef100]">Architecture</h3>
-                  <p className="text-sm text-muted-foreground group-hover:text-[#fef100]">
-                    기술로써의 코딩이 아닌 아키텍처를 구성하는 원리를 전달합니다.
+                    코드페어와 공모전
                   </p>
                 </CardContent>
               </Card>
