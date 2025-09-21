@@ -52,7 +52,7 @@ export default function HomePage() {
             <Link href="#news" className="text-sm font-medium hover:text-primary transition-colors">
               News
             </Link>
-            <Button className="bg-primary text-primary-foreground transition-colors hover:bg-[#283890] hover:text-[#fef100]">Play</Button>
+            <Button className="bg-primary text-primary-foreground px-8 py-4 transition-colors hover:bg-[#283890] hover:text-[#fef100]">Play</Button>
           </nav>
         </div>
       </header>
@@ -139,7 +139,7 @@ export default function HomePage() {
         </section>
 
         {/* Curriculum */}
-        <section id="curriculum" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="curriculum" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
