@@ -52,7 +52,7 @@ export default function HomePage() {
             <Link href="#news" className="text-sm font-medium hover:text-primary transition-colors">
               News
             </Link>
-            <Button>Enroll Now</Button>
+            <Button className="bg-primary text-primary-foreground transition-colors hover:bg-[#283890] hover:text-[#fef100]">Play</Button>
           </nav>
         </div>
       </header>
