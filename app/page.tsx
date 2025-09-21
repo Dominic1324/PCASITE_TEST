@@ -45,14 +45,14 @@ export default function HomePage() {
 
   const getCardStyle = (index: number) => {
     const offset = index - activeIndex;
-    const transformValue = Math.abs(offset * -20);
+    const translateXValue = offset * 40;
     const scaleValue = offset === 0 ? 1.1 : 0.9;
     const opacityValue = offset === 0 ? 1 : 0.6;
     const zIndexValue = offset === 0 ? 10 : 0;
     const blurValue = offset < 0 ? 'blur(4px)' : 'blur(0px)';
 
     return {
-      transform: `translateX(${transformValue}%) scale(${scaleValue})`,
+      transform: `translateX(${translateXValue}%) scale(${scaleValue})`,
       opacity: opacityValue,
       zIndex: zIndexValue,
       filter: blurValue,
