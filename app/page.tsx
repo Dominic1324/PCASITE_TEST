@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check, Brain, GitMerge, Building, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -156,127 +157,150 @@ export default function HomePage() {
                   <ChevronLeft className="h-8 w-8" />
                 </Button>
                 <div className="flex-1 px-4">
-                  <div className="flex justify-center">
-                    {level === 'elementary' && (
-                      <div className="grid md:grid-cols-3 gap-8">
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/hello-coding-novice.jpg"
-                            alt="Hello Coding Novice"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">Hello Coding - Novice</h3>
-                            <p className="text-white text-sm">Understanding Basic Algorithms</p>
+                  <div className="flex justify-center h-[450px] items-center">
+                    <AnimatePresence mode="wait">
+                      {level === 'elementary' && (
+                        <motion.div
+                          key="elementary"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -20 }}
+                          transition={{ duration: 0.3 }}
+                          className="grid md:grid-cols-3 gap-8"
+                        >
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/hello-coding-novice.jpg"
+                              alt="Hello Coding Novice"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">Hello Coding - Novice</h3>
+                              <p className="text-white text-sm">Understanding Basic Algorithms</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/hello-coding-im.jpg"
-                            alt="Hello Coding Intermediate Mid"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">Hello Coding - Intermediate Mid</h3>
-                            <p className="text-white text-sm">Understanding Applied Algorithms</p>
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/hello-coding-im.jpg"
+                              alt="Hello Coding Intermediate Mid"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">Hello Coding - Intermediate Mid</h3>
+                              <p className="text-white text-sm">Understanding Applied Algorithms</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/hello-coding-ih.jpg"
-                            alt="Hello Coding Intermediate High"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">Hello Coding - Intermediate High</h3>
-                            <p className="text-white text-sm">Understanding Complex Algorithms</p>
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/hello-coding-ih.jpg"
+                              alt="Hello Coding Intermediate High"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">Hello Coding - Intermediate High</h3>
+                              <p className="text-white text-sm">Understanding Complex Algorithms</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    )}
-                    {level === 'middle' && (
-                      <div className="grid md:grid-cols-3 gap-8">
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/placeholder.jpg"
-                            alt="Middle School Curriculum 1"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">Middle School Curriculum 1</h3>
-                            <p className="text-white text-sm">Description for Middle School Curriculum 1</p>
+                        </motion.div>
+                      )}
+                      {level === 'middle' && (
+                        <motion.div
+                          key="middle"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -20 }}
+                          transition={{ duration: 0.3 }}
+                          className="grid md:grid-cols-3 gap-8"
+                        >
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/placeholder.jpg"
+                              alt="Middle School Curriculum 1"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">Middle School Curriculum 1</h3>
+                              <p className="text-white text-sm">Description for Middle School Curriculum 1</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/placeholder.jpg"
-                            alt="Middle School Curriculum 2"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">Middle School Curriculum 2</h3>
-                            <p className="text-white text-sm">Description for Middle School Curriculum 2</p>
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/placeholder.jpg"
+                              alt="Middle School Curriculum 2"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">Middle School Curriculum 2</h3>
+                              <p className="text-white text-sm">Description for Middle School Curriculum 2</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/placeholder.jpg"
-                            alt="Middle School Curriculum 3"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">Middle School Curriculum 3</h3>
-                            <p className="text-white text-sm">Description for Middle School Curriculum 3</p>
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/placeholder.jpg"
+                              alt="Middle School Curriculum 3"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">Middle School Curriculum 3</h3>
+                              <p className="text-white text-sm">Description for Middle School Curriculum 3</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    )}
-                    {level === 'high' && (
-                      <div className="grid md:grid-cols-3 gap-8">
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/placeholder.jpg"
-                            alt="High School Curriculum 1"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">High School Curriculum 1</h3>
-                            <p className="text-white text-sm">Description for High School Curriculum 1</p>
+                        </motion.div>
+                      )}
+                      {level === 'high' && (
+                        <motion.div
+                          key="high"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -20 }}
+                          transition={{ duration: 0.3 }}
+                          className="grid md:grid-cols-3 gap-8"
+                        >
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/placeholder.jpg"
+                              alt="High School Curriculum 1"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">High School Curriculum 1</h3>
+                              <p className="text-white text-sm">Description for High School Curriculum 1</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/placeholder.jpg"
-                            alt="High School Curriculum 2"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">High School Curriculum 2</h3>
-                            <p className="text-white text-sm">Description for High School Curriculum 2</p>
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/placeholder.jpg"
+                              alt="High School Curriculum 2"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">High School Curriculum 2</h3>
+                              <p className="text-white text-sm">Description for High School Curriculum 2</p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="relative group w-[300px] h-[420px]">
-                          <Image
-                            src="/placeholder.jpg"
-                            alt="High School Curriculum 3"
-                            fill
-                            className="rounded-lg object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-white text-lg font-bold">High School Curriculum 3</h3>
-                            <p className="text-white text-sm">Description for High School Curriculum 3</p>
+                          <div className="relative group w-[300px] h-[420px]">
+                            <Image
+                              src="/placeholder.jpg"
+                              alt="High School Curriculum 3"
+                              fill
+                              className="rounded-lg object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <h3 className="text-white text-lg font-bold">High School Curriculum 3</h3>
+                              <p className="text-white text-sm">Description for High School Curriculum 3</p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    )}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
                 <Button variant="ghost" size="icon" onClick={handleNext} className="shrink-0">
