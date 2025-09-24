@@ -29,6 +29,33 @@ const curriculumData = [
   },
 ];
 
+const achievementsData = [
+  {
+    id: '01',
+    title: 'E-Commerce Platform',
+    description: 'React와 Node.js로 제작한 풀스택 이커머스 솔루션. (제작: Alex Chen, 16세)',
+    image: '/placeholder.svg?height=200&width=400',
+    githubUrl: '#',
+    liveUrl: '#',
+  },
+  {
+    id: '02',
+    title: 'AI Study Assistant',
+    description: '머신러닝 기반의 학습 보조 앱. (제작: Maria Rodriguez, 17세)',
+    image: '/placeholder.svg?height=200&width=400',
+    githubUrl: '#',
+    liveUrl: '#',
+  },
+  {
+    id: '03',
+    title: 'Mobile Fitness Tracker',
+    description: '크로스플랫폼 피트니스 앱. (제작: James Park, 15세)',
+    image: '/placeholder.svg?height=200&width=400',
+    githubUrl: '#',
+    liveUrl: '#',
+  },
+];
+
 // Helper function to calculate circular offset
 const getCircularOffset = (index: number, activeIndex: number, count: number) => {
   const diff = index - activeIndex;
@@ -45,17 +72,17 @@ export default function HomePage() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrev = () => {
-    setActiveIndex((prevIndex) => (prevIndex - 1 + curriculumData.length) % curriculumData.length);
+    setActiveIndex((prevIndex) => (prevIndex - 1 + achievementsData.length) % achievementsData.length);
   };
 
   const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % curriculumData.length);
+    setActiveIndex((prevIndex) => (prevIndex + 1) % achievementsData.length);
   };
 
-  const activeCurriculum = curriculumData[activeIndex];
+  const activeAchievement = achievementsData[activeIndex];
 
   const getCardStyle = (index: number) => {
-    const offset = getCircularOffset(index, activeIndex, curriculumData.length);
+    const offset = getCircularOffset(index, activeIndex, achievementsData.length);
     
     const translateXValue = offset * 40; // e.g., -40%, 0%, 40%
     const scaleValue = offset === 0 ? 1.1 : 0.9;
@@ -160,27 +187,18 @@ export default function HomePage() {
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">PCA는 학생들의 연령/수준/적성에 맞는 코스를 체계적으로 제공합니다</p>
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">{activeCurriculum?.level}</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{activeCurriculum?.title}</h2>
-                <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">{activeCurriculum?.description}</p>
-                <div className="flex gap-4 pt-4">
-                    <Button onClick={handlePrev} variant="outline" size="icon"><ChevronLeft className="h-4 w-4" /></Button>
-                    <Button onClick={handleNext} variant="outline" size="icon"><ChevronRight className="h-4 w-4" /></Button>
-                </div>
-              </div>
-              <div className="relative h-[400px] flex items-center justify-center">
-                {curriculumData.map((item, index) => (
-                  <div key={item.id} className="w-3/5 transition-all duration-500 ease-in-out" style={getCardStyle(index)}>
-                    <Card className="h-[350px]">
-                      <CardContent className="p-6">
-                        {/* Empty as requested */}
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
-              </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3">
+              {curriculumData.map((item) => (
+                <Card key={item.id} className="h-full flex flex-col">
+                  <CardHeader>
+                    <Badge variant="secondary" className="mb-4 w-fit">{item.level}</Badge>
+                    <CardTitle>{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -188,52 +206,36 @@ export default function HomePage() {
         {/* Student Achievements */}
         <section id="achievements" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Student Achievements</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">PCA는 학생들마다 확실한 결과를 만들어냅니다</p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <Image src="/placeholder.svg?height=200&width=400" width={400} height={200} alt="Student Project" className="rounded-lg object-cover w-full h-48" />
-                </CardHeader>
-                <CardContent>
-                  <CardTitle>E-Commerce Platform</CardTitle>
-                  <CardDescription>React와 Node.js로 제작한 풀스택 이커머스 솔루션. (제작: Alex Chen, 16세)</CardDescription>
-                  <div className="flex items-center space-x-2">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{activeAchievement?.title}</h2>
+                <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">{activeAchievement?.description}</p>
+                <div className="flex items-center space-x-2">
                     <Button variant="outline" size="sm"><Github className="h-4 w-4 mr-2" />Code</Button>
                     <Button variant="outline" size="sm"><ExternalLink className="h-4 w-4 mr-2" />Live Demo</Button>
+                </div>
+                <div className="flex gap-4 pt-4">
+                    <Button onClick={handlePrev} variant="outline" size="icon"><ChevronLeft className="h-4 w-4" /></Button>
+                    <Button onClick={handleNext} variant="outline" size="icon"><ChevronRight className="h-4 w-4" /></Button>
+                </div>
+              </div>
+              <div className="relative h-[400px] flex items-center justify-center">
+                {achievementsData.map((item, index) => (
+                  <div key={item.id} className="w-3/5 transition-all duration-500 ease-in-out" style={getCardStyle(index)}>
+                    <Card className="h-[350px]">
+                      <CardContent className="p-6 flex items-center justify-center">
+                        <Image src={item.image} width={400} height={200} alt={item.title} className="rounded-lg object-cover w-full h-48" />
+                      </CardContent>
+                    </Card>
                   </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Image src="/placeholder.svg?height=200&width=400" width={400} height={200} alt="Student Project" className="rounded-lg object-cover w-full h-48" />
-                </CardHeader>
-                <CardContent>
-                  <CardTitle>AI Study Assistant</CardTitle>
-                  <CardDescription>머신러닝 기반의 학습 보조 앱. (제작: Maria Rodriguez, 17세)</CardDescription>
-                  <div className="flex items-center space-x-2">
-                    <Button variant="outline" size="sm"><Github className="h-4 w-4 mr-2" />Code</Button>
-                    <Button variant="outline" size="sm"><ExternalLink className="h-4 w-4 mr-2" />Live Demo</Button>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Image src="/placeholder.svg?height=200&width=400" width={400} height={200} alt="Student Project" className="rounded-lg object-cover w-full h-48" />
-                </CardHeader>
-                <CardContent>
-                  <CardTitle>Mobile Fitness Tracker</CardTitle>
-                  <CardDescription>크로스플랫폼 피트니스 앱. (제작: James Park, 15세)</CardDescription>
-                  <div className="flex items-center space-x-2">
-                    <Button variant="outline" size="sm"><Github className="h-4 w-4 mr-2" />Code</Button>
-                    <Button variant="outline" size="sm"><ExternalLink className="h-4 w-4 mr-2" />Live Demo</Button>
-                  </div>
-                </CardContent>
-              </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
