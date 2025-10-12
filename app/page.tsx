@@ -38,27 +38,6 @@ const achievementsData = [
 	},
 ];
 
-const curriculumData = [
-    {
-        id: '01',
-        level: '초급',
-        title: '코딩 첫걸음',
-        description: '컴퓨터 과학의 기본 개념을 배우고 스크래치나 파이썬 같은 쉬운 언어로 코딩의 기초를 다집니다.'
-    },
-    {
-        id: '02',
-        level: '중급',
-        title: '알고리즘과 자료구조',
-        description: '문제 해결 능력을 키우기 위해 필수적인 알고리즘과 자료구조를 심도 있게 학습합니다.'
-    },
-    {
-        id: '03',
-        level: '고급',
-        title: '웹/앱 개발',
-        description: 'React, Node.js, Swift 등 최신 기술을 사용하여 자신만의 웹사이트나 모바일 앱을 만듭니다.'
-    }
-];
-
 // Helper function to calculate circular offset
 const getCircularOffset = (index: number, activeIndex: number, count: number) => {
 	const diff = index - activeIndex;
@@ -266,31 +245,6 @@ export default function HomePage() {
 					</div>
 				</section>
 
-                {/* Curriculum */}
-                <section id="curriculum" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-                  <div className="container mx-auto px-4 md:px-6">
-                    <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                      <div className="space-y-2">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Curriculums</h2>
-                        <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">PCA는 학생들의 연령/수준/적성에 맞는 코스를 체계적으로 제공합니다</p>
-                      </div>
-                    </div>
-                    <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3">
-                      {curriculumData.map((item) => (
-                        <Card key={item.id} className="h-full flex flex-col">
-                          <CardHeader>
-                            <Badge variant="secondary" className="mb-4 w-fit">{item.level}</Badge>
-                            <CardTitle>{item.title}</CardTitle>
-                          </CardHeader>
-                          <CardContent className="flex-grow">
-                            <CardDescription>{item.description}</CardDescription>
-                          </CardContent>
-                        </Card>
-                      ))}
-                    </div>
-                  </div>
-                </section>
-
 				{/* Student Achievements */}
 				<section
 					id="achievements"
@@ -371,7 +325,7 @@ export default function HomePage() {
 								<Button
 									onClick={handleNext}
 									variant="outline"
-									size="icon"
+								size="icon"
 									className="pointer-events-auto rounded-full bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 border-gray-300"
 								>
 									<ChevronRight className="h-6 w-6" />
