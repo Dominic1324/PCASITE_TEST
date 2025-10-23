@@ -10,6 +10,7 @@ import Link from "next/link";
 import { achievementsData } from "@/app/data/achievements";
 import Curriculums from "@/components/Curriculums";
 import Affiliate from "@/components/Affiliate";
+import News from "@/components/News";
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 
 export default function HomePage() {
@@ -104,13 +105,10 @@ export default function HomePage() {
     						<Image src="/logo.png" alt="PCA Logo" width={100} height={40} />
     					</div>
     					<nav className="flex items-center space-x-6">
-    						<Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
-    													<Link href="#curriculum" className="text-sm font-medium hover:text-primary transition-colors">Curriculum</Link>
-    						                            <Link href="#affiliate" className="text-sm font-medium hover:text-primary transition-colors">Affiliate</Link>
-    						    							<Link href="#achievements" className="text-sm font-medium hover:text-primary transition-colors">Achievements</Link>
+    													<Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
     						    							<Link href="#news" className="text-sm font-medium hover:text-primary transition-colors">News</Link>
-    						    							<Button className="bg-primary text-primary-foreground px-8 py-4 transition-colors hover:bg-[#283890] hover:text-[#fef100]">Play</Button>
-    						    						</nav>
+    						    							<Link href="/affiliate" className="text-sm font-medium hover:text-primary transition-colors">Affiliate</Link>
+    						    							<Button className="bg-primary text-primary-foreground px-8 py-4 transition-colors hover:bg-[#283890] hover:text-[#fef100]">Play</Button>    						    						</nav>
     						    					</div>
     						    				</header>
     						    
@@ -260,9 +258,11 @@ export default function HomePage() {
     						      </div>
     						    </section>
     						    
-    						    								<Curriculums />
-    						    				                <Affiliate />
-    						    				    			</main>    			{/* Footer */}
+    						    																<Curriculums />
+    						    
+    						    								    								<News />
+    						    
+    						    								    							</main>    			{/* Footer */}
     			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
     				<p className="text-xs text-muted-foreground sm:ml-auto">© 2024 Programming Coding Academy. All rights reserved.</p>
     				<nav className="flex gap-4 sm:gap-6">

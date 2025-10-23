@@ -131,7 +131,7 @@ import {
   export default function Affiliate() {
     return (
       <section id="affiliate" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900 text-white">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
@@ -142,7 +142,7 @@ import {
               </p>
             </div>
           </div>
-          <div className="mx-auto pt-12 max-w-6xl">
+          <div className="mx-auto pt-12 max-w-6xl w-full">
             <Card className="bg-gray-800 border-gray-700">
               <CardContent className="p-0">
                 <Table>
