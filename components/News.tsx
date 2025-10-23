@@ -75,7 +75,7 @@ export default function News() {
               </Card>
             </Link>
           ))}
-          <Link href="#" className="group block relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-2">
+          <Link href="#" className="group block relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 h-full">
             <Card className="h-full flex flex-col justify-center items-center bg-[#283890] text-white">
               <CardContent className="p-0 flex flex-col justify-center items-center h-full">
                 <h3 className="font-bold text-2xl">More</h3>
