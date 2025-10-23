@@ -32,6 +32,13 @@ const newsItems = [
     image: "/hello-coding-ih.jpg", // Placeholder image
     link: "#",
   },
+  {
+    id: 5,
+    title: "코딩 교육, 왜 지금 시작해야 할까요?",
+    description: "미래 사회의 필수 역량, 코딩 교육의 중요성을 알아봅니다.",
+    image: "/hello-coding-novice.jpg", // Placeholder image
+    link: "#",
+  },
 ];
 
 export default function News() {
@@ -41,7 +48,7 @@ export default function News() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              News & Blog
+              News
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               플레이코딩아카데미의 최신 소식과 유익한 정보를 만나보세요.
