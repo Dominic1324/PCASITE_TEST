@@ -63,8 +63,8 @@ export default function News() {
                   <Image
                     src={item.image}
                     alt={item.title}
-                    width={index < 2 ? 768 : 512}
-                    height={256}
+                    width={index < 2 ? 768 : 256}
+                    height={index < 2 ? 256 : 256}
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
