@@ -14,7 +14,7 @@ const Curriculums = () => {
                     >
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <h3 className="text-4xl font-bold text-white ml-4 md:ml-12" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{curriculum.title}</h3>
+                            <h3 className="text-4xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{curriculum.title}</h3>
                         </div>
                     </div>
                     <div className="container mx-auto py-12 px-4 md:px-6">
