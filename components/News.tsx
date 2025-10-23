@@ -51,7 +51,7 @@ export default function News() {
               News
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              플레이코딩아카데미의 최신 소식과 유익한 정보를 만나보세요.
+              코딩 교육의 최신 트렌드와 유용한 정보를 확인하세요.
             </p>
           </div>
         </div>
