@@ -8,35 +8,35 @@ const newsItems = [
     id: 1,
     title: "새로운 코딩 교육 프로그램 출시!",
     description: "플레이코딩아카데미에서 혁신적인 코딩 교육 프로그램을 선보입니다.",
-    image: "/coding_block.png", // Placeholder image
+    image: "/news-images/landscape/1730877404859-노란색과 보라색 컬러풀한 3d 쇼핑몰 별점 리뷰 작성 혜택 이벤트 홍보 인스타그램 포스트의 사본 (600 x 300 px).png",
     link: "#",
   },
   {
     id: 2,
     title: "AI 시대, 코딩 교육의 중요성",
     description: "미래 사회를 이끌어갈 인재 양성을 위한 코딩 교육의 중요성을 알아봅니다.",
-    image: "/coding_script.jpg", // Placeholder image
+    image: "/news-images/landscape/1734500063111-코드페어 금상 수상의 사본.png",
     link: "#",
   },
   {
     id: 3,
     title: "학생 성공 사례: 코딩으로 꿈을 이루다",
     description: "PCA 졸업생들의 놀라운 성공 스토리를 만나보세요.",
-    image: "/coding_portfolio.jpg", // Placeholder image
+    image: "/news-images/square/2024_한국코드페어_금상_수상_썸네일.png",
     link: "#",
   },
   {
     id: 4,
     title: "학부모를 위한 코딩 교육 가이드",
     description: "자녀의 코딩 교육, 어떻게 시작해야 할지 막막하신가요?",
-    image: "/hello-coding-ih.jpg", // Placeholder image
+    image: "/news-images/square/AI_생기부전략_.png",
     link: "#",
   },
   {
     id: 5,
     title: "코딩 교육, 왜 지금 시작해야 할까요?",
     description: "미래 사회의 필수 역량, 코딩 교육의 중요성을 알아봅니다.",
-    image: "/hello-coding-novice.jpg", // Placeholder image
+    image: "/news-images/square/Blue_Gold_Best_of_the_Best_Award_Winners_nomination_Instagram_Post_.png",
     link: "#",
   },
 ];
@@ -75,7 +75,7 @@ export default function News() {
               </Card>
             </Link>
           ))}
-          <Link href="#" className="group block relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 h-full">
+          <Link href="https://blog.naver.com/playcodingacademy" className="group block relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 h-full">
             <Card className="h-full flex flex-col justify-center items-center bg-[#283890] text-white">
               <CardContent className="p-0 flex flex-col justify-center items-center h-full">
                 <h3 className="font-bold text-2xl">More</h3>
