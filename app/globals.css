@@ -1,9 +1,61 @@
+@font-face {
+    font-family: 'Arita Sans LTN';
+    font-weight: 100;
+    src: url('/font/Arita_Sans_LTN/Arita Sans LTN/AritaSansLTN-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Sans LTN';
+    font-weight: 300;
+    src: url('/font/Arita_Sans_LTN/Arita Sans LTN/AritaSansLTN-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Sans LTN';
+    font-weight: 500;
+    src: url('/font/Arita_Sans_LTN/Arita Sans LTN/AritaSansLTN-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Sans LTN';
+    font-weight: 600;
+    src: url('/font/Arita_Sans_LTN/Arita Sans LTN/AritaSansLTN-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Sans LTN';
+    font-weight: 700;
+    src: url('/font/Arita_Sans_LTN/Arita Sans LTN/AritaSansLTN-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Arita Dotum KR';
+    font-weight: 100;
+    src: url('/font/Arita_Dotum_KR/Arita Dotum KR/AritaDotumKR-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Dotum KR';
+    font-weight: 300;
+    src: url('/font/Arita_Dotum_KR/Arita Dotum KR/AritaDotumKR-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Dotum KR';
+    font-weight: 500;
+    src: url('/font/Arita_Dotum_KR/Arita Dotum KR/AritaDotumKR-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Dotum KR';
+    font-weight: 600;
+    src: url('/font/Arita_Dotum_KR/Arita Dotum KR/AritaDotumKR-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Arita Dotum KR';
+    font-weight: 700;
+    src: url('/font/Arita_Dotum_KR/Arita Dotum KR/AritaDotumKR-Bold.ttf') format('truetype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arita Dotum KR', 'Arita Sans LTN', Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
