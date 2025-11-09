@@ -205,6 +205,8 @@ import Footer from "@/components/Footer";
             <div className="mx-auto max-w-5xl w-full my-20">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <Card>
+                  <CardHeader>
+                    <CardTitle>프랜차이즈 가맹 문의하기</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
