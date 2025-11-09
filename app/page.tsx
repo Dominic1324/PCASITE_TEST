@@ -9,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { achievementsData } from "@/app/data/achievements";
 import Curriculums from "@/components/Curriculums";
-import Affiliate from "@/components/Affiliate";
 import News from "@/components/News";
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 import Header from "@/components/Header";
@@ -50,6 +49,7 @@ export default function HomePage() {
         const vibeToggleRef = useRef(null);
     
         useEffect(() => {
+            const node = portfolioToggleRef.current;
             const observer = new IntersectionObserver(
                 ([entry]) => {
                     if (entry.isIntersecting) {
@@ -61,18 +61,19 @@ export default function HomePage() {
                 { threshold: 0.9 } // Trigger when 90% of the section is visible
             );
     
-            if (portfolioToggleRef.current) {
-                observer.observe(portfolioToggleRef.current);
+            if (node) {
+                observer.observe(node);
             }
     
             return () => {
-                if (portfolioToggleRef.current) {
-                    observer.unobserve(portfolioToggleRef.current);
+                if (node) {
+                    observer.unobserve(node);
                 }
             };
-        }, [portfolioToggleRef]);
+        }, []);
     
         useEffect(() => {
+            const node = vibeToggleRef.current;
             const observer = new IntersectionObserver(
                 ([entry]) => {
                     if (entry.isIntersecting) {
@@ -84,16 +85,16 @@ export default function HomePage() {
                 { threshold: 0.9 } // Trigger when 90% of the section is visible
             );
     
-            if (vibeToggleRef.current) {
-                observer.observe(vibeToggleRef.current);
+            if (node) {
+                observer.observe(node);
             }
     
             return () => {
-                if (vibeToggleRef.current) {
-                    observer.unobserve(vibeToggleRef.current);
+                if (node) {
+                    observer.unobserve(node);
                 }
             };
-        }, [vibeToggleRef]);
+        }, []);
     
     	const activeAchievement = achievementsData[selectedIndex];
     
@@ -124,36 +125,35 @@ export default function HomePage() {
     						    						                                <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">PCA와 함께라면 무엇이든지 가능합니다</h2>
     						    						                            </div>
     						    						                        </div>
-    						    						                        <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
-    						    						                                                        <Card className="bg-white border-8 border-secondary rounded-3xl">
-    						    						                                                            <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
-    						    						                                                                <div className="flex justify-center items-center mb-4">
-    						    						                                                                    <div className="rounded-full bg-primary text-primary-foreground p-4"><BookOpen className="h-8 w-8" /></div>
-    						    						                                                                </div>
-    						    						                                                                <h3 className="text-xl font-bold mb-2">생기부</h3>
-    						    						                                                                <p className="text-sm text-muted-foreground">수행평가, 학종 포트폴리오</p>
-    						    						                                                            </CardContent>
-    						    						                                                        </Card>
-    						    						                                                        <Card className="bg-white border-8 border-secondary rounded-3xl">
-    						    						                                                            <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
-    						    						                                                                <div className="flex justify-center items-center mb-4">
-    						    						                                                                    <div className="rounded-full bg-primary text-primary-foreground p-4"><Brain className="h-8 w-8" /></div>
-    						    						                                                                </div>
-    						    						                                                                <h3 className="text-xl font-bold mb-2">EC/AP</h3>
-    						    						                                                                <p className="text-sm text-muted-foreground">AI 기술 앱 개발</p>
-    						    						                                                            </CardContent>
-    						    						                                                        </Card>
-    						    						                                                        <Card className="bg-white border-8 border-secondary rounded-3xl">
-    						    						                                                            <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
-    						    						                                                                <div className="flex justify-center items-center mb-4">
-    						    						                                                                    <div className="rounded-full bg-primary text-primary-foreground p-4"><Trophy className="h-8 w-8" /></div>
-    						    						                                                                </div>
-    						    						                                                                <h3 className="text-xl font-bold mb-2">대회</h3>
-    						    						                                                                <p className="text-sm text-muted-foreground">코드페어와 공모전</p>
-    						    						                                                            </CardContent>
-    						    						                                                        </Card>
-    						    						                        </div>
-    						    						</div>
+    						    						                        						                        <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
+    						    						                        						                                                        <Card className="bg-white border-8 border-secondary rounded-3xl">
+    						    						                        						                                                            <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
+    						    						                        						                                                                <div className="flex justify-center items-center mb-4">
+    						    						                        						                                                                    <div className="rounded-full bg-primary text-primary-foreground p-4"><BookOpen className="h-8 w-8" /></div>
+    						    						                        						                                                                </div>
+    						    						                        						                                                                <h3 className="text-xl font-bold mb-2">대학 입시 생기부</h3>
+    						    						                        						                                                                <p className="text-sm text-muted-foreground">AI 역량을 강조하는 독창적인 탐구 보고서</p>
+    						    						                        						                                                            </CardContent>
+    						    						                        						                                                        </Card>
+    						    						                        						                                                        <Card className="bg-white border-8 border-secondary rounded-3xl">
+    						    						                        						                                                            <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
+    						    						                        						                                                                <div className="flex justify-center items-center mb-4">
+    						    						                        						                                                                    <div className="rounded-full bg-primary text-primary-foreground p-4"><Smartphone className="h-8 w-8" /></div>
+    						    						                        						                                                                </div>
+    						    						                        						                                                                <h3 className="text-xl font-bold mb-2">내러티브가 있는 EC/AP</h3>
+    						    						                        						                                                                <p className="text-sm text-muted-foreground">나만의 스토리가 담긴 앱/웹 개발 프로젝트</p>
+    						    						                        						                                                            </CardContent>
+    						    						                        						                                                        </Card>
+    						    						                        						                                                        <Card className="bg-white border-8 border-secondary rounded-3xl">
+    						    						                        						                                                            <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
+    						    						                        						                                                                <div className="flex justify-center items-center mb-4">
+    						    						                        						                                                                    <div className="rounded-full bg-primary text-primary-foreground p-4"><Trophy className="h-8 w-8" /></div>
+    						    						                        						                                                                </div>
+    						    						                        						                                                                <h3 className="text-xl font-bold mb-2">대회 대비</h3>
+    						    						                        						                                                                <p className="text-sm text-muted-foreground">한국코드페어, 공모전 등 수상 실적 확보</p>
+    						    						                        						                                                            </CardContent>
+    						    						                        						                                                        </Card>
+    						    						                        						                        </div>    						    						</div>
     						    					</section>
     						    
     						    					{/* Student Achievements */}
@@ -168,7 +168,7 @@ export default function HomePage() {
     						    									<div className="py-20 md:py-32">
     						    										<div className="flex flex-col items-center justify-center space-y-4 text-center">
     						    											<div className="space-y-2">
-    						    												<h2 className="text-2xl font-bold tracking-tighter md:text-3xl text-gray-800">PCA는 결과로 증명합니다.</h2>
+    						    												<h2 className="text-2xl sm:text-4xl font-bold text-gray-800">PCA는 결과로 증명합니다</h2>
     						    											</div>
     						    										</div>
     						    										<div className="relative mt-12">
@@ -183,7 +183,7 @@ export default function HomePage() {
     						    							                                                                                                className="w-[250px] h-[300px] bg-white rounded-2xl shadow-2xl flex flex-col relative transition-transform duration-500"
     						    							                                                                                                style={{ transform: `scale(${index === selectedIndex ? 1.1 : 0.85})` }}
     						    							                                                                                            >
-    						    							                                                                                                <div className="absolute top-2 left-4 text-xs font-mono text-gray-400">#{item.id}</div>
+    						    							                                                                                                <div className="absolute top-2 left-4 text-sm font-bold text-primary z-10 bg-white px-2 py-1 rounded-md">#{item.id}</div>
     						    							                                                                                                <div className="w-full h-4/6 relative">
     						    							                                                                                                    <Image src={item.image} alt={item.title} fill className="object-cover rounded-t-2xl" />
     						    							                                                                                                </div>					                                                    <div className="h-2/6 p-4 flex flex-col justify-center">

@@ -9,7 +9,7 @@ export const curriculumsData = [
     {
         id: '02',
         title: '블록 코딩 단계',
-        description: '시각적인 블록을 활용하여 복잡한 프로그래밍 원리를 쉽고 재미있게 학습하는 과정입니다. 창의적인 아이디어를 코드로 구현하며 컴퓨팅 사고력을 향상시킵니다.',
+        description: '시각적인 블록을 활용하여 복잡한 프로그래밍 원리를 쉽고 재미있게 학습하는 과정입니다. PCA가 자체 개발한 플랫폼과 교재를 통해 더욱 체계적인 학습환경을 제공합니다.',
         image: '/coding_block.png',
         courses: ['Advanced Algorithms', 'Complex Data Structures', 'Graph Theory', 'Dynamic Programming'],
     },
