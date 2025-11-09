@@ -205,8 +205,6 @@ import Footer from "@/components/Footer";
             <div className="mx-auto max-w-5xl w-full my-20">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <Card>
-                  <CardHeader>
-                    <CardTitle>프랜차이즈 가맹 문의하기</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
@@ -228,13 +226,13 @@ import Footer from "@/components/Footer";
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle>가맹 관련 문의하기</CardTitle>
+                    <CardTitle>가맹점 확인하기</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      가맹 사업에 대해 더 궁금한 점이 있으신가요?
+                      가까운 PCA 가맹점을 찾아보세요.
                     </p>
-                    <Button className="w-full">문의하기</Button>
+                    <Button className="w-full">가맹점 찾기</Button>
                   </CardContent>
                 </Card>
               </div>

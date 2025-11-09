@@ -12,6 +12,7 @@ import Curriculums from "@/components/Curriculums";
 import News from "@/components/News";
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
         const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
@@ -249,15 +250,7 @@ export default function HomePage() {
     						    
     						    								    								<News />
     						    
-    						    								    							</main>    			{/* Footer */}
-    			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-    				<p className="text-xs text-muted-foreground sm:ml-auto">© 2024 Programming Coding Academy. All rights reserved.</p>
-    				<nav className="flex gap-4 sm:gap-6">
-    					<Link href="#" className="text-xs hover:underline underline-offset-4">개인정보처리방침</Link>
-    					<Link href="#" className="text-xs hover:underline underline-offset-4">이용약관</Link>
-    					<Link href="#" className="text-xs hover:underline underline-offset-4">문의하기</Link>
-    				</nav>
-    			</footer>
+    						    								    							</main>    			<Footer />
     		</div>
     	);
     
