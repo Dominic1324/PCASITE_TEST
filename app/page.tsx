@@ -12,6 +12,7 @@ import Curriculums from "@/components/Curriculums";
 import Affiliate from "@/components/Affiliate";
 import News from "@/components/News";
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
+import Header from "@/components/Header";
 
 export default function HomePage() {
         const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
@@ -98,19 +99,7 @@ export default function HomePage() {
     
     	return (
     		<div className="flex flex-col min-h-screen">
-    			{/* Header */}
-    			<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-    				<div className="container mx-auto flex h-16 items-center justify-between">
-    					<div className="flex items-center space-x-2">
-    						<Image src="/logo.png" alt="PCA Logo" width={100} height={40} />
-    					</div>
-    					<nav className="flex items-center space-x-6">
-    													<Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
-    						    							<Link href="#news" className="text-sm font-medium hover:text-primary transition-colors">News</Link>
-    						    							<Link href="/affiliate" className="text-sm font-medium hover:text-primary transition-colors">Affiliate</Link>
-    						    							<Button className="bg-primary text-primary-foreground px-8 py-4 transition-colors hover:bg-[#283890] hover:text-[#fef100]">Play</Button>    						    						</nav>
-    						    					</div>
-    						    				</header>
+    			<Header />
     						    
     						    				<main className="flex-1">
     						    					{/* Hero Section */}
