@@ -126,32 +126,29 @@ export default function HomePage() {
     						    						                        </div>
     						    						                        <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
     						    						                            <Card className="bg-border border-8 border-secondary rounded-3xl">
-    						    						                                <CardContent className="flex flex-col items-center text-center p-6 h-[250px]">
-    						    						                                    <div className="flex justify-center items-center mb-4">
-    						    						                                        <div className="rounded-full bg-primary text-primary-foreground p-4"><BookOpen className="h-8 w-8" /></div>
-    						    						                                    </div>
-    						    						                                    <h3 className="text-xl font-bold mb-2">생기부</h3>
-    						    						                                    <p className="text-sm text-muted-foreground">수행평가, 학종 포트폴리오</p>
-    						    						                                </CardContent>
-    						    						                            </Card>
+    						    						                                                                                                <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
+    						    						                                                                                                    <div className="flex justify-center items-center mb-4">
+    						    						                                                                                                        <div className="rounded-full bg-primary text-primary-foreground p-4"><BookOpen className="h-8 w-8" /></div>
+    						    						                                                                                                    </div>
+    						    						                                                                                                    <h3 className="text-xl font-bold mb-2">생기부</h3>
+    						    						                                                                                                    <p className="text-sm text-muted-foreground">수행평가, 학종 포트폴리오</p>
+    						    						                                                                                                </CardContent>    						    						                            </Card>
     						    						                            <Card className="bg-border border-8 border-secondary rounded-3xl">
-    						    						                                <CardContent className="flex flex-col items-center text-center p-6 h-[250px]">
-    						    						                                    <div className="flex justify-center items-center mb-4">
-    						    						                                        <div className="rounded-full bg-primary text-primary-foreground p-4"><Brain className="h-8 w-8" /></div>
-    						    						                                    </div>
-    						    						                                    <h3 className="text-xl font-bold mb-2">EC/AP</h3>
-    						    						                                    <p className="text-sm text-muted-foreground">AI 기술 앱 개발</p>
-    						    						                                </CardContent>
-    						    						                            </Card>
+    						    						                                                                                                <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
+    						    						                                                                                                    <div className="flex justify-center items-center mb-4">
+    						    						                                                                                                        <div className="rounded-full bg-primary text-primary-foreground p-4"><Brain className="h-8 w-8" /></div>
+    						    						                                                                                                    </div>
+    						    						                                                                                                    <h3 className="text-xl font-bold mb-2">EC/AP</h3>
+    						    						                                                                                                    <p className="text-sm text-muted-foreground">AI 기술 앱 개발</p>
+    						    						                                                                                                </CardContent>    						    						                            </Card>
     						    						                            <Card className="bg-border border-8 border-secondary rounded-3xl">
-    						    						                                <CardContent className="flex flex-col items-center text-center p-6 h-[250px]">
-    						    						                                    <div className="flex justify-center items-center mb-4">
-    						    						                                        <div className="rounded-full bg-primary text-primary-foreground p-4"><Trophy className="h-8 w-8" /></div>
-    						    						                                    </div>
-    						    						                                    <h3 className="text-xl font-bold mb-2">대회</h3>
-    						    						                                    <p className="text-sm text-muted-foreground">코드페어와 공모전</p>
-    						    						                                </CardContent>
-    						    						                            </Card>
+    						    						                                                                                                <CardContent className="flex flex-col items-center text-center p-6 h-[250px] justify-around">
+    						    						                                                                                                    <div className="flex justify-center items-center mb-4">
+    						    						                                                                                                        <div className="rounded-full bg-primary text-primary-foreground p-4"><Trophy className="h-8 w-8" /></div>
+    						    						                                                                                                    </div>
+    						    						                                                                                                    <h3 className="text-xl font-bold mb-2">대회</h3>
+    						    						                                                                                                    <p className="text-sm text-muted-foreground">코드페어와 공모전</p>
+    						    						                                                                                                </CardContent>    						    						                            </Card>
     						    						                        </div>
     						    						</div>
     						    					</section>
