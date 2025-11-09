@@ -118,14 +118,12 @@ export default function HomePage() {
     						    
     						    					{/* About PCA Section */}
     						    					<section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-    						    						<div className="container mx-auto px-4 md:px-6">
-    						    							<div className="flex flex-col items-center justify-center space-y-4 text-center">
-    						    								<div className="space-y-2">
-    						    									<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About PCA</h2>
-    						    									<p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">PCA는 코딩을 통해 생각하는 방법을 가르칩니다</p>
-    						    								</div>
-    						    							</div>
-    						    							<div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
+    						    						    <div className="container mx-auto px-4 md:px-6">
+    						    						        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+    						    						            <div className="space-y-2">
+    						    						                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">PCA와 함께라면 무엇이든지 가능합니다</h2>
+    						    						            </div>
+    						    						        </div>    						    							<div className="mx-auto grid max-w-5xl items-start gap-8 py-12 lg:grid-cols-3">
     						    								<Card className="bg-border border-4 border-secondary rounded-3xl">
     						    									<CardContent className="flex flex-col items-center text-center p-6">
     						    										<div className="flex justify-center items-center mb-4">
