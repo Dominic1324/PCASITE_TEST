@@ -143,7 +143,7 @@ import Header from "@/components/Header";
                   </div>
                 </div>
                 <div className="mx-auto max-w-5xl w-full">
-                  <Table className="w-full">
+<Table className="w-full table-fixed">
                     <colgroup>
                       <col style={{ width: '150px' }} />
                       <col style={{ width: 'calc((100% - 150px) / 2)' }} />
@@ -164,7 +164,7 @@ import Header from "@/components/Header";
                 </div>
               </div>
               <div className="mx-auto max-w-5xl w-full">
-                <Table className="w-full">
+                <Table className="w-full table-fixed">
                     <colgroup>
                       <col style={{ width: '150px' }} />
                       <col style={{ width: 'calc((100% - 150px) / 2)' }} />
