@@ -142,7 +142,7 @@ export default function HomePage() {
     						    						                        						                                                                    <div className="rounded-full bg-primary text-primary-foreground p-4"><Smartphone className="h-8 w-8" /></div>
     						    						                        						                                                                </div>
     						    						                        						                                                                <h3 className="text-xl font-bold mb-2">내러티브가 있는 EC/AP</h3>
-    						    						                        						                                                                <p className="text-sm text-muted-foreground">나만의 스토리가 담긴 앱/웹 개발 프로젝트</p>
+    						    						                        						                                                                <p className="text-sm text-muted-foreground">나만의 스토리가 담긴 앱 개발 프로젝트</p>
     						    						                        						                                                            </CardContent>
     						    						                        						                                                        </Card>
     						    						                        						                                                        <Card className="bg-white border-8 border-secondary rounded-3xl">
