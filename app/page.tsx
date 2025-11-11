@@ -222,7 +222,7 @@ export default function HomePage() {
     						        <div className="max-w-4xl mx-auto space-y-8">
     						          <div ref={portfolioToggleRef} className="bg-white rounded-2xl border border-gray-200 p-12 flex items-center justify-between">
     						            <div>
-    						              <h3 className={`text-2xl font-bold transition-colors duration-700 ${isPortfolioActive ? 'text-gray-800' : 'text-gray-500'}`}>포트폴리오 중심 교육</h3>
+    						              <h3 className={`text-3xl font-bold transition-colors duration-700 ${isPortfolioActive ? 'text-gray-800' : 'text-gray-500'}`}>포트폴리오 중심 교육</h3>
     						              <p className={`mt-2 max-w-md transition-colors duration-700 ${isPortfolioActive ? 'text-muted-foreground' : 'text-gray-400'}`}>학생들은 PCPA와 함께 세상의 없는 나만의 프로젝트를<br />만들며 가시적인 결과물을 만들어냅니다.</p>
     						            </div>
     						            <div className={`w-32 h-16 rounded-full relative p-2 transition-colors duration-700 ${isPortfolioActive ? 'bg-yellow-300' : 'bg-gray-300'}`}>
@@ -233,7 +233,7 @@ export default function HomePage() {
     						          </div>
     						          <div ref={vibeToggleRef} className="bg-white rounded-2xl border border-gray-200 p-12 flex items-center justify-between">
     						            <div>
-    						              <h3 className={`text-2xl font-bold transition-colors duration-700 ${isVibeActive ? 'text-gray-800' : 'text-gray-500'}`}>바이브 코딩 교육</h3>
+    						              <h3 className={`text-3xl font-bold transition-colors duration-700 ${isVibeActive ? 'text-gray-800' : 'text-gray-500'}`}>바이브 코딩 교육</h3>
     						              <p className={`mt-2 max-w-md transition-colors duration-700 ${isVibeActive ? 'text-muted-foreground' : 'text-gray-400'}`}>학생들로 하여금 창의성과 문제해결에 집중하게 하며,<br />AI는 프로젝트의 구현을 위한 파트너 역할을 맡습니다.</p>
     						            </div>
     						            <div className={`w-32 h-16 rounded-full relative p-2 transition-colors duration-700 ${isVibeActive ? 'bg-blue-800' : 'bg-gray-300'}`}>
