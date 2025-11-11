@@ -10,7 +10,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between">
         <div className="flex items-center space-x-2">
           <Link href="/">
-            <Image src="/logo.png" alt="PCA Logo" width={100} height={40} />
+            <Image src="/logos/logo.png" alt="PCA Logo" width={100} height={40} />
           </Link>
         </div>
         <nav className="flex items-center space-x-6">
