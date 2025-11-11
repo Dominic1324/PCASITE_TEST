@@ -106,7 +106,7 @@ export default function HomePage() {
     						    				<main className="flex-1">
     						    					{/* Hero Section */}
     						    					<section className="relative w-full flex items-center min-h-[calc(100vh-4rem)] py-12">
-    						    						<Image src="/books-1.jpg" alt="Background of PCA course books" fill sizes="100vw" className="-z-10 object-cover" priority />
+    						    						<Image src="/books/books-1.jpg" alt="Background of PCA course books" fill sizes="100vw" className="-z-10 object-cover" priority />
     						    						<div className="absolute inset-0 bg-black/60 -z-10" />
     						    						<div className="relative z-10 container mx-auto px-4 md:px-6">
     						    							<div className="flex flex-col items-center space-y-4 text-center">
@@ -162,7 +162,7 @@ export default function HomePage() {
     						    									<div className="absolute inset-0 -z-10">
     						    										<div className="h-2/3 bg-[#f3f4f6]" />
     						    										<div className="relative h-1/3">
-    						    											<div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/award.jpg')", backgroundPosition: 'center 75%' }} />
+    						    											<div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/achievements/award.jpg')", backgroundPosition: 'center 75%' }} />
     						    											<div className="absolute inset-0 bg-black/50" />
     						    										</div>
     						    									</div>
