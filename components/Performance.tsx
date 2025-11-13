@@ -19,7 +19,7 @@ const Performance = () => {
   ];
 
   return (
-    <section className="bg-[#212121] text-white py-16 md:py-20">
+    <section className="bg-secondary text-secondary-foreground py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-3 gap-12">
           <div className="md:col-span-1 flex items-center">
@@ -35,14 +35,14 @@ const Performance = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6">주요 대학 합격 현황</h3>
               <div className="relative">
-                <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-gray-500/30" />
+                <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-muted" />
                 <ul className="space-y-6">
                   {uniAcceptances.map((item, index) => (
                     <li key={index} className="relative pl-8">
-                      <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-[#212121]" />
+                      <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-secondary" />
                       <div>
                         <p className="font-bold">{item.name}</p>
-                        <p className="text-sm text-gray-400 whitespace-pre-line">{item.details}</p>
+                        <p className="text-sm text-muted-foreground whitespace-pre-line">{item.details}</p>
                       </div>
                     </li>
                   ))}
@@ -52,14 +52,14 @@ const Performance = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6">주요 수상 실적</h3>
               <div className="relative">
-                <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-gray-500/30" />
+                <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-muted" />
                 <ul className="space-y-6">
                   {awards.map((item, index) => (
                     <li key={index} className="relative pl-8">
-                      <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-[#212121]" />
+                      <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-secondary" />
                       <div>
                         <p className="font-bold">{item.name}</p>
-                        <p className="text-sm text-gray-400 whitespace-pre-line">{item.details}</p>
+                        <p className="text-sm text-muted-foreground whitespace-pre-line">{item.details}</p>
                       </div>
                     </li>
                   ))}
