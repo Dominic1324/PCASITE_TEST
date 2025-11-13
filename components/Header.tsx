@@ -14,9 +14,8 @@ export default function Header() {
           </Link>
         </div>
         <nav className="flex items-center space-x-6">
-          <Link href="/#about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+          <Link href="https://blog.naver.com/playcodingacademy" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
           <Link href="/board" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-primary transition-colors">Board</Link>
-          <Link href="/#news" className="text-sm font-medium hover:text-primary transition-colors">News</Link>
           <Link href="/affiliate" className="text-sm font-medium hover:text-primary transition-colors">Affiliate</Link>
           <Button className="bg-primary text-primary-foreground px-8 py-4 transition-colors hover:bg-[#283890] hover:text-[#fef100]">Play</Button>
         </nav>
