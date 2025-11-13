@@ -155,24 +155,29 @@ export default function HomePage() {
 															<h2 className="text-3xl sm:text-5xl font-bold text-gray-800">결과로 증명하는 PCA</h2>
 														</div>
 														
-														<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-8 gap-y-12">
-															{achievementsData.map((item) => (
-																<button 
-																	key={item.id} 
-																	className="flex flex-col items-center space-y-2 group"
-																	onClick={() => handleIconClick(item)}
-																>
-																	<div className="relative w-24 h-24 transition-transform duration-300 group-hover:scale-110">
-																		<Image 
-																			src={item.image} 
-																			alt={item.title} 
-																			fill
-																			className="rounded-3xl object-cover shadow-lg"
-																		/>
-																	</div>
-																	<p className="text-sm font-medium text-gray-700 text-center">{item.title}</p>
-																</button>
-															))}
+														<div 
+															className="bg-white/50 rounded-3xl p-8 md:p-12 mx-auto max-w-6xl border border-gray-200"
+															style={{ backdropFilter: 'blur(10px)' }}
+														>
+															<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-8 gap-y-12">
+																{achievementsData.map((item) => (
+																	<button 
+																		key={item.id} 
+																		className="flex flex-col items-center space-y-2 group"
+																		onClick={() => handleIconClick(item)}
+																	>
+																		<div className="relative w-24 h-24 transition-transform duration-300 group-hover:scale-110">
+																			<Image 
+																				src={item.image} 
+																				alt={item.title} 
+																				fill
+																				className="rounded-3xl object-cover shadow-lg"
+																			/>
+																		</div>
+																		<p className="text-sm font-medium text-gray-700 text-center">{item.title}</p>
+																	</button>
+																))}
+															</div>
 														</div>
 													</div>
 												</section>
