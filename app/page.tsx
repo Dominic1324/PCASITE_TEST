@@ -147,14 +147,8 @@ export default function HomePage() {
     						    
     						    					{/* Student Achievements */}
 												<section id="achievements" className="w-full py-20 md:py-32 relative">
-													{/* Mesh Gradient Background */}
-													<div className="absolute inset-0 -z-10 bg-white">
-														<div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-														<div 
-															className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-200 opacity-50"
-															style={{ filter: 'blur(80px)'}}
-														></div>
-													</div>
+													{/* Solid Background */}
+													<div className="absolute inset-0 -z-10 bg-white"></div>
 
 													<div className="container mx-auto px-4 md:px-6">
 														<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
