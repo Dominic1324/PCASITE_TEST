@@ -13,6 +13,7 @@ import News from "@/components/News";
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Performance from "@/components/Performance";
 
 export default function HomePage() {
         const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
@@ -156,6 +157,8 @@ export default function HomePage() {
     						    						                        						                                                        </Card>
     						    						                        						                        </div>    						    						</div>
     						    					</section>
+
+												<Performance />
     						    
     						    					{/* Student Achievements */}
     						    				                <section id="achievements" className="relative w-full overflow-hidden">
