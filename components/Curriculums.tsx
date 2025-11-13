@@ -26,7 +26,7 @@ const Curriculums = () => {
     return (
         <section className="py-12 bg-gray-50">
             <div className="container mx-auto text-center">
-                <h2 className="text-2xl sm:text-4xl font-bold">PCA만의 교육 프로그램은?</h2>
+                <h2 className="text-2xl sm:text-4xl font-bold w-full">PCA만의 교육 프로그램은?</h2>
             </div>
             <div className="container mx-auto mt-12 space-y-12">
                 {/* Existing Curriculums Map */}
@@ -34,13 +34,14 @@ const Curriculums = () => {
                     <div key={curriculum.id} className="p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                             <div className={index === 1 ? 'md:order-last' : ''}>
-                                <Image 
-                                    src={curriculum.image} 
-                                    alt={curriculum.title} 
-                                    width={500} 
-                                    height={500} 
-                                    className="rounded-2xl aspect-square object-cover" 
-                                />
+                                <div className="relative w-full aspect-square">
+                                    <Image 
+                                        src={curriculum.image} 
+                                        alt={curriculum.title} 
+                                        fill 
+                                        className="rounded-2xl object-cover" 
+                                    />
+                                </div>
                             </div>
                             <div className="text-left">
                                 <h3 className="text-3xl font-bold text-gray-800">{curriculum.title}</h3>
