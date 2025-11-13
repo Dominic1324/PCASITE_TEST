@@ -156,8 +156,8 @@ export default function HomePage() {
 														</div>
 														
 														<div 
-															className="bg-white/50 rounded-3xl p-8 md:p-12 mx-auto max-w-6xl border border-gray-200"
-															style={{ backdropFilter: 'blur(10px)' }}
+															className="rounded-3xl p-8 md:p-12 mx-auto max-w-6xl border border-gray-200 bg-gradient-to-br from-blue-100 via-gray-100 to-white opacity-70"
+															style={{ filter: 'blur(80px)' }}
 														>
 															<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-8 gap-y-12">
 																{achievementsData.map((item) => (
