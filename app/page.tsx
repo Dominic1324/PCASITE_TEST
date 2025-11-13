@@ -153,9 +153,6 @@ export default function HomePage() {
 													<div className="container mx-auto px-4 md:px-6">
 														<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
 															<h2 className="text-3xl sm:text-5xl font-bold text-gray-800">결과로 증명하는 PCA</h2>
-															<p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-																PCA 학생들은 자신의 아이디어를 현실로 구현하며, 각종 대회 수상과 명문대 합격으로 그 실력을 증명하고 있습니다.
-															</p>
 														</div>
 														
 														<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-8 gap-y-12">
