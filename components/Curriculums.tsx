@@ -23,7 +23,7 @@ const Curriculums = () => {
     const currentCurriculums = individualCurriculumsData[activeCategory];
 
     return (
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-white">
             <div className="container mx-auto text-center">
                 <h2 className="text-2xl sm:text-4xl font-bold">PCA만의 교육 프로그램은?</h2>
             </div>

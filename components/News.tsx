@@ -43,7 +43,7 @@ const newsItems = [
 
 export default function News() {
   return (
-    <section id="news" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section id="news" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
       <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">

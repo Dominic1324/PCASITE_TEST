@@ -181,7 +181,7 @@ export default function HomePage() {
 												</section>
 
     						    				{/* How is it possible? Section */}
-    						    <section className="w-full py-8 md:py-16 lg:py-24 bg-white">
+    						    <section className="w-full py-8 md:py-16 lg:py-24 bg-gray-50">
     						      <div className="container mx-auto px-4 md:px-6">
     						        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
     						          <h2 className="text-gray-800 text-2xl sm:text-4xl font-bold">어떻게 가능할까요?</h2>
