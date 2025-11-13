@@ -163,7 +163,7 @@ export default function HomePage() {
     						    					{/* Student Achievements */}
     						    				                <section id="achievements" className="relative w-full overflow-hidden">
     						    									<div className="absolute inset-0 -z-10">
-    						    										<div className="h-2/3 bg-[#f3f4f6]" />
+    						    										<div className="h-2/3 bg-white" />
     						    										<div className="relative h-1/3">
     						    											<div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/achievements/award.jpg')", backgroundPosition: 'center 75%' }} />
     						    											<div className="absolute inset-0 bg-black/50" />
