@@ -31,7 +31,7 @@ const Curriculums = () => {
             <div className="container mx-auto mt-12 space-y-12">
                 {/* Existing Curriculums Map */}
                 {curriculumsData.map((curriculum, index) => (
-                    <div key={curriculum.id} className="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                    <div key={curriculum.id} className="p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                             <div className={index === 1 ? 'md:order-last' : ''}>
                                 <Image 
