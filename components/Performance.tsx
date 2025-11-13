@@ -19,9 +19,9 @@ const Performance = () => {
   ];
 
   return (
-    <section className="bg-[#212121] text-white py-20 md:py-24 lg:py-32">
+    <section className="bg-[#212121] text-white py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-3 gap-16">
+        <div className="grid md:grid-cols-3 gap-12">
           <div className="md:col-span-1 flex items-center">
             <h2 className="text-4xl font-bold">
               PCA의
@@ -33,10 +33,10 @@ const Performance = () => {
           </div>
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-8">주요 대학 합격 현황</h3>
+              <h3 className="text-2xl font-semibold mb-6">주요 대학 합격 현황</h3>
               <div className="relative">
                 <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-gray-500/30" />
-                <ul className="space-y-10">
+                <ul className="space-y-6">
                   {uniAcceptances.map((item, index) => (
                     <li key={index} className="relative pl-8">
                       <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-[#212121]" />
@@ -50,10 +50,10 @@ const Performance = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-8">주요 수상 실적</h3>
+              <h3 className="text-2xl font-semibold mb-6">주요 수상 실적</h3>
               <div className="relative">
                 <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-gray-500/30" />
-                <ul className="space-y-10">
+                <ul className="space-y-6">
                   {awards.map((item, index) => (
                     <li key={index} className="relative pl-8">
                       <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-[#212121]" />
