@@ -24,11 +24,11 @@ const Performance = () => {
         <div className="grid md:grid-cols-3 gap-16">
           <div className="md:col-span-1 flex items-center">
             <h2 className="text-4xl font-bold">
-              PCA는
+              PCA의
               <br />
-              결과로
+              입시 및 대회 성적을
               <br />
-              증명합니다
+              확인하세요
             </h2>
           </div>
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-12">
