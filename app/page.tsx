@@ -161,14 +161,7 @@ export default function HomePage() {
 												<Performance />
     						    
     						    					{/* Student Achievements */}
-    						    				                <section id="achievements" className="relative w-full overflow-hidden">
-    						    									<div className="absolute inset-0 -z-10">
-    						    										<div className="h-2/3 bg-[#f3f4f6]" />
-    						    										<div className="relative h-1/3">
-    						    											<div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/achievements/award.jpg')", backgroundPosition: 'center 75%' }} />
-    						    											<div className="absolute inset-0 bg-black/50" />
-    						    										</div>
-    						    									</div>
+    						    				                <section id="achievements" className="relative w-full overflow-hidden bg-white">
     						    									<div className="py-20 md:py-32">
     						    										<div className="flex flex-col items-center justify-center space-y-4 text-center">
     						    											<div className="space-y-2">
