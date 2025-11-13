@@ -5,7 +5,6 @@ import { curriculumsData } from "@/app/data/curriculums";
 import { individualCurriculumsData } from "@/app/data/individualCurriculums";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 
 const Curriculums = () => {
     const [activeCategory, setActiveCategory] = useState("codingFundamentals");
@@ -31,23 +30,22 @@ const Curriculums = () => {
             <div className="container mx-auto mt-12 space-y-12">
                 {/* Existing Curriculums Map */}
                 {curriculumsData.map((curriculum, index) => (
-                    <div key={curriculum.id} className="p-8 md:p-12">
-                        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                            <div className={index === 1 ? 'md:order-last' : ''}>
-                                <Image 
-                                    src={curriculum.image} 
-                                    alt={curriculum.title} 
-                                    width={500} 
-                                    height={500} 
-                                    className="rounded-lg aspect-square object-cover" 
-                                />
+                    <div key={curriculum.id} className="bg-white rounded-2xl overflow-hidden shadow-lg">
+                        <div 
+                            className="relative h-80 w-full bg-fixed bg-cover bg-center"
+                            style={{ backgroundImage: `url(${curriculum.image})` }}
+                        >
+                            <div className="absolute inset-0 bg-black opacity-50"></div>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <h3 className="text-3xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{curriculum.title}</h3>
                             </div>
-                            <div className="text-left">
-                                <h3 className="text-3xl font-bold text-gray-800">{curriculum.title}</h3>
-                                <p className="mt-4 text-muted-foreground">{curriculum.description}</p>
-                                <ul className="mt-6 grid grid-cols-2 gap-3">
+                        </div>
+                        <div className="py-12 px-4 md:px-6">
+                            <div className="max-w-3xl mx-auto text-center">
+                                <p className="text-lg text-muted-foreground mb-8">{curriculum.description}</p>
+                                <ul className="grid grid-cols-2 gap-4">
                                     {curriculum.courses.map((course, courseIndex) => (
-                                        <li key={courseIndex} className="bg-gray-100 p-3 rounded-md text-sm text-gray-700">{course}</li>
+                                        <li key={courseIndex} className="bg-gray-100 p-4 rounded-lg shadow-sm text-center">{course}</li>
                                     ))}
                                 </ul>
                             </div>
