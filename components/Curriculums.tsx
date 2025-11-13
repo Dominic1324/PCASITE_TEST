@@ -39,7 +39,7 @@ const Curriculums = () => {
                                     alt={curriculum.title} 
                                     width={500} 
                                     height={500} 
-                                    className="rounded-2xl aspect-square object-cover" 
+                                    className="rounded-lg aspect-square object-cover" 
                                 />
                             </div>
                             <div className="text-left">
