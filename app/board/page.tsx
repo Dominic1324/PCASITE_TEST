@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 const boardPosts = [
   { id: 1, title: "PCA 11월 학부모 설명회 안내", date: "2025-11-15", author: "PCA 운영팀" },
@@ -11,34 +12,37 @@ const boardPosts = [
 
 export default function BoardPage() {
   return (
-    <div className="container mx-auto py-12 px-4 md:px-6">
-      <div className="space-y-4 text-center mb-12">
-        <h1 className="text-4xl font-bold">PCA 소식</h1>
-        <p className="text-muted-foreground">
-          플레이코딩아카데미의 최신 소식과 공지사항을 확인하세요.
-        </p>
+    <>
+      <Header />
+      <div className="container mx-auto py-12 px-4 md:px-6">
+        <div className="space-y-4 text-center mb-12">
+          <h1 className="text-4xl font-bold">PCA 소식</h1>
+          <p className="text-muted-foreground">
+            플레이코딩아카데미의 최신 소식과 공지사항을 확인하세요.
+          </p>
+        </div>
+        <Card>
+          <CardContent className="p-0">
+            <div className="divide-y">
+              {boardPosts.map((post) => (
+                <Link href="#" key={post.id} className="block p-6 hover:bg-gray-50">
+                  <div className="flex justify-between items-center">
+                      <div>
+                          <h3 className="text-lg font-semibold">{post.title}</h3>
+                          <p className="text-sm text-muted-foreground">
+                              {post.author} · {post.date}
+                          </p>
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                          <span>조회수 123</span>
+                      </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
-      <Card>
-        <CardContent className="p-0">
-          <div className="divide-y">
-            {boardPosts.map((post) => (
-              <Link href="#" key={post.id} className="block p-6 hover:bg-gray-50">
-                <div className="flex justify-between items-center">
-                    <div>
-                        <h3 className="text-lg font-semibold">{post.title}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {post.author} · {post.date}
-                        </p>
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                        <span>조회수 123</span>
-                    </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+    </>
   );
 }
