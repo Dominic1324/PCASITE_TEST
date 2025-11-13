@@ -156,7 +156,7 @@ export default function HomePage() {
 														</div>
 														
 														<div 
-															className="bg-white/50 rounded-3xl p-8 md:p-12 mx-auto max-w-6xl border border-gray-200"
+															className="rounded-3xl p-8 md:p-12 mx-auto max-w-6xl border border-gray-200 bg-gradient-to-br from-blue-100/50 via-gray-100/50 to-white/50"
 															style={{ backdropFilter: 'blur(10px)' }}
 														>
 															<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-8 gap-y-12">
