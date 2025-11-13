@@ -33,32 +33,38 @@ const Performance = () => {
           </div>
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">주요 대학 합격 현황</h3>
-              <ul className="space-y-4">
-                {uniAcceptances.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" />
-                    <div>
-                      <p className="font-bold">{item.name}</p>
-                      <p className="text-sm text-gray-400">{item.details}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-2xl font-semibold mb-8">주요 대학 합격 현황</h3>
+              <div className="relative">
+                <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-gray-500/30" />
+                <ul className="space-y-10">
+                  {uniAcceptances.map((item, index) => (
+                    <li key={index} className="relative pl-8">
+                      <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-[#212121]" />
+                      <div>
+                        <p className="font-bold">{item.name}</p>
+                        <p className="text-sm text-gray-400 whitespace-pre-line">{item.details}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-6">주요 수상 실적</h3>
-              <ul className="space-y-4">
-                {awards.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" />
-                    <div>
-                      <p className="font-bold">{item.name}</p>
-                      <p className="text-sm text-gray-400">{item.details}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-2xl font-semibold mb-8">주요 수상 실적</h3>
+              <div className="relative">
+                <div className="absolute left-[1px] top-2 bottom-2 w-0.5 bg-gray-500/30" />
+                <ul className="space-y-10">
+                  {awards.map((item, index) => (
+                    <li key={index} className="relative pl-8">
+                      <div className="absolute top-1 -left-[7px] h-4 w-4 bg-primary rounded-full border-4 border-[#212121]" />
+                      <div>
+                        <p className="font-bold">{item.name}</p>
+                        <p className="text-sm text-gray-400 whitespace-pre-line">{item.details}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
