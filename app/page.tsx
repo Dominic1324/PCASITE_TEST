@@ -1,50 +1,37 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+	Dialog,
+	DialogContent,
+	DialogHeader,
+	DialogTitle,
+	DialogDescription,
+	DialogFooter,
+	DialogClose,
+} from "@/components/ui/dialog";
 import { Code, Trophy, Users, BookOpen, Star, Calendar, ArrowRight, Github, ExternalLink, Check, Brain, GitMerge, Building, ChevronLeft, ChevronRight, Blocks, GraduationCap, School, Sparkles, FileCode2, Cog, Smartphone, Apple, Lightbulb, Coffee, FlaskConical, Globe, Award, Laptop, PenTool, FileText, Lightbulb as Patent, Microscope, ClipboardList, BriefcaseBusiness, Bot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { achievementsData } from "@/app/data/achievements";
 import Curriculums from "@/components/Curriculums";
 import News from "@/components/News";
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Performance from "@/components/Performance";
 
 export default function HomePage() {
-        const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
-        const [selectedIndex, setSelectedIndex] = useState(0);
-    
-        const scrollPrev = useCallback(() => {
-            if (emblaApi) emblaApi.scrollPrev();
-        }, [emblaApi]);
-    
-        const scrollNext = useCallback(() => {
-            if (emblaApi) emblaApi.scrollNext();
-        }, [emblaApi]);
-    
-        const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-        }, []);
-    
-        useEffect(() => {
-            if (!emblaApi) return;
-            onSelect(emblaApi);
-            emblaApi.on('select', onSelect);
-            emblaApi.on('reInit', onSelect);
-    
-            const onKey = (e: KeyboardEvent) => {
-    			if (e.key === 'ArrowLeft') scrollPrev();
-    			if (e.key === 'ArrowRight') scrollNext();
-    		};
-    		window.addEventListener('keydown', onKey);
-    		return () => window.removeEventListener('keydown', onKey);
-        }, [emblaApi, onSelect, scrollPrev, scrollNext]);
-    
+		const [selectedAchievement, setSelectedAchievement] = useState<typeof achievementsData[0] | null>(null);
+		const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+		const handleIconClick = (achievement: typeof achievementsData[0]) => {
+			setSelectedAchievement(achievement);
+			setIsDialogOpen(true);
+		};
+
         const [isPortfolioActive, setIsPortfolioActive] = useState(false);
         const [isVibeActive, setIsVibeActive] = useState(false);
         const portfolioToggleRef = useRef(null);
@@ -97,8 +84,6 @@ export default function HomePage() {
                 }
             };
         }, []);
-    
-    	const activeAchievement = achievementsData[selectedIndex];
     
     	return (
     		<div className="flex flex-col min-h-screen">
@@ -161,61 +146,46 @@ export default function HomePage() {
 												<Performance />
     						    
     						    					{/* Student Achievements */}
-    						    				                <section id="achievements" className="relative w-full overflow-hidden">
-    						    									<div className="absolute inset-0 -z-10">
-    						    										<div className="h-2/3 bg-white" />
-    						    										<div className="relative h-1/3">
-    						    											<div className="absolute inset-0 bg-cover" style={{ backgroundImage: "url('/achievements/award.jpg')", backgroundPosition: 'center 75%' }} />
-    						    											<div className="absolute inset-0 bg-black/50" />
-    						    										</div>
-    						    									</div>
-    						    									<div className="py-20 md:py-32">
-    						    										<div className="flex flex-col items-center justify-center space-y-4 text-center">
-    						    											<div className="space-y-2">
-    						    												<h2 className="text-2xl sm:text-4xl font-bold text-gray-800">PCA는 결과로 증명합니다</h2>
-    						    											</div>
-    						    										</div>
-    						    										<div className="relative mt-12">
-    						    							                            <div className="embla" ref={emblaRef}>
-    						    							                                <div className="embla__container">
-    						    							                                    {achievementsData.map((item, index) => (
-    						    							                                        <div className="embla__slide" key={item.id} style={{ flex: '0 0 250px', padding: '2rem 1rem' }}>
-    						    							                                                                                        <div 
-    						    							                                                                                            className="h-full flex items-center"
-    						    							                                                                                        >
-    						    							                                                                                            <div 
-    						    							                                                                                                className="w-[250px] h-[300px] bg-white rounded-2xl shadow-2xl flex flex-col relative transition-transform duration-500"
-    						    							                                                                                                style={{ transform: `scale(${index === selectedIndex ? 1.1 : 0.85})` }}
-    						    							                                                                                            >
-    						    							                                                                                                <div className="absolute top-2 left-4 text-sm font-bold text-primary z-10 bg-white px-2 py-1 rounded-md">#{item.id}</div>
-    						    							                                                                                                <div className="w-full h-4/6 relative">
-    						    							                                                                                                    <Image src={item.image} alt={item.title} fill className="object-cover rounded-t-2xl" />
-    						    							                                                                                                </div>					                                                    <div className="h-2/6 p-4 flex flex-col justify-center">
-    						    							                                                        <h3 className="font-bold text-left text-xs">{item.title}</h3>
-    						    							                                                        <div className="w-full flex items-center justify-between mt-2">
-    						    							                                                            <p className="text-xs text-gray-500">Student Name</p>
-    						    							                                                            <Link href={item.githubUrl} target="_blank" className="inline-flex items-center justify-center px-2 py-1 bg-gray-800 text-white text-xs font-mono rounded-md hover:bg-gray-700">
-    						    							                                                                <Github className="h-3 w-3 mr-1" />
-    						    							                                                                code
-    						    							                                                            </Link>
-    						    							                                                    </div>
-    						    							                                                    </div>
-    						    							                                                </div>
-    						    							                                            </div>
-    						    							                                        </div>
-    						    							                                    ))}
-    						    							                                </div>
-    						    							                            </div>
-    						    											<div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between z-20 pointer-events-none">
-    						    												<Button onClick={scrollPrev} variant="outline" size="icon" className="pointer-events-auto rounded-full bg-white/80"><ChevronLeft className="h-6 w-6" /></Button>
-    						    												<Button onClick={scrollNext} variant="outline" size="icon" className="pointer-events-auto rounded-full bg-white/80"><ChevronRight className="h-6 w-6" /></Button>
-    						    											</div>
-    						    										</div>
-    						    									</div>
-    						    									<div className="absolute bottom-0 left-0 right-0 text-center z-20 pointer-events-none h-1/3 flex items-center justify-center">
-    						    										<h2 className="text-white text-2xl sm:text-4xl font-bold" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.7)' }}>{activeAchievement?.achievement}</h2>
-    						    									</div>
-    						    								</section>
+												<section id="achievements" className="w-full py-20 md:py-32 relative">
+													{/* Mesh Gradient Background */}
+													<div className="absolute inset-0 -z-10 bg-white">
+														<div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+														<div 
+															className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-200 opacity-50"
+															style={{ filter: 'blur(80px)'}}
+														></div>
+													</div>
+
+													<div className="container mx-auto px-4 md:px-6">
+														<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+															<h2 className="text-3xl sm:text-5xl font-bold text-gray-800">결과로 증명하는 PCA</h2>
+															<p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+																PCA 학생들은 자신의 아이디어를 현실로 구현하며, 각종 대회 수상과 명문대 합격으로 그 실력을 증명하고 있습니다.
+															</p>
+														</div>
+														
+														<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-8 gap-y-12">
+															{achievementsData.map((item) => (
+																<button 
+																	key={item.id} 
+																	className="flex flex-col items-center space-y-2 group"
+																	onClick={() => handleIconClick(item)}
+																>
+																	<div className="relative w-24 h-24 transition-transform duration-300 group-hover:scale-110">
+																		<Image 
+																			src={item.image} 
+																			alt={item.title} 
+																			fill
+																			className="rounded-3xl object-cover shadow-lg"
+																		/>
+																	</div>
+																	<p className="text-sm font-medium text-gray-700 text-center">{item.title}</p>
+																</button>
+															))}
+														</div>
+													</div>
+												</section>
+
     						    				{/* How is it possible? Section */}
     						    <section className="w-full py-8 md:py-16 lg:py-24 bg-white">
     						      <div className="container mx-auto px-4 md:px-6">
@@ -252,6 +222,46 @@ export default function HomePage() {
     						    								    								<News />
     						    
     						    								    							</main>    			<Footer />
+
+			{selectedAchievement && (
+				<Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+					<DialogContent className="sm:max-w-[600px]">
+						<DialogHeader>
+							<DialogTitle>{selectedAchievement.title}</DialogTitle>
+							<DialogDescription>
+								{selectedAchievement.achievement}
+							</DialogDescription>
+						</DialogHeader>
+						<div className="grid gap-4 py-4">
+							<div className="relative aspect-video w-full">
+								<Image 
+									src={selectedAchievement.image} 
+									alt={selectedAchievement.title} 
+									fill
+									className="rounded-md object-cover"
+								/>
+							</div>
+							<p className="text-sm text-muted-foreground">
+								{/* Placeholder for more detailed description */}
+								이 프로젝트는 학생의 창의적인 아이디어와 기술적 역량을 보여주는 훌륭한 예시입니다. 자세한 내용은 GitHub에서 확인하실 수 있습니다.
+							</p>
+						</div>
+						<DialogFooter>
+							<Button asChild variant="secondary">
+								<Link href={selectedAchievement.githubUrl} target="_blank">
+									<Github className="h-4 w-4 mr-2" />
+									GitHub
+								</Link>
+							</Button>
+							<DialogClose asChild>
+								<Button type="button">
+									닫기
+								</Button>
+							</DialogClose>
+						</DialogFooter>
+					</DialogContent>
+				</Dialog>
+			)}
     		</div>
     	);
     
