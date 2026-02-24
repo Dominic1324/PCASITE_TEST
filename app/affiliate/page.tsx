@@ -1,19 +1,19 @@
 'use client';
 
-  import Image from "next/image";
-  import Link from "next/link";
-  import { Button } from "@/components/ui/button";
-  import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-  import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-  } from "@/components/ui/table";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageBanner from "@/components/common/PageBanner";
   
   const affiliateData = [
     {
@@ -132,116 +132,92 @@ import Footer from "@/components/Footer";
     return (
       <>
         <Header />
-        <section id="affiliate" className="w-full bg-background text-foreground">
-          <div className="px-4 md:px-6">
-            <div> {/* New Wrapper Div */}
-              <div className="sticky top-16 z-10 bg-background pt-8 md:pt-16 lg:pt-24">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-6">
-                  <div className="space-y-2">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-800">
-                    플레이코딩아카데미 가맹사업 비교
-                    </h2>
-                  </div>
-                </div>
-                <div className="mx-auto max-w-5xl w-full">
-<Table className="w-full table-fixed">
-                    <colgroup>
-                      <col style={{ width: '150px' }} />
-                      <col style={{ width: 'calc((100% - 150px) / 2)' }} />
-                      <col style={{ width: 'calc((100% - 150px) / 2)' }} />
-                    </colgroup>
-                    <TableHeader>
-                      <TableRow className="border-b-2 border-gray-200">
-                        <TableHead className="text-gray-800 text-base font-bold p-4 align-middle bg-white">구분</TableHead>
-                        <TableHead className="text-center text-lg font-bold p-4 text-gray-800">
-                        프랜차이즈 가맹
-                        </TableHead>
-                        <TableHead className="text-center text-lg font-bold p-4 text-gray-800">
-                        컨텐츠 공급 가맹
-                        </TableHead>
-                      </TableRow>
-                    </TableHeader>
-                  </Table>
-                </div>
-              </div>
-              <div className="mx-auto max-w-5xl w-full">
+        <PageBanner title="FRANCHISE" watermark="FRANCHISE" />
+
+        <section id="affiliate" className="w-full bg-background py-12 text-foreground md:py-16">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">플레이코딩아카데미 가맹사업 비교</h2>
+              <p className="mt-2 text-sm text-slate-600 md:text-base">운영 방식과 지원 범위를 한눈에 비교하고 적합한 모델을 선택해보세요.</p>
+            </div>
+
+            <Card className="overflow-hidden border-slate-200/70 shadow-sm">
+              <CardContent className="p-0">
                 <Table className="w-full table-fixed">
-                    <colgroup>
-                      <col style={{ width: '150px' }} />
-                      <col style={{ width: 'calc((100% - 150px) / 2)' }} />
-                      <col style={{ width: 'calc((100% - 150px) / 2)' }} />
-                    </colgroup>
-                  <TableBody className="bg-white">
+                  <colgroup>
+                    <col style={{ width: "22%" }} />
+                    <col style={{ width: "39%" }} />
+                    <col style={{ width: "39%" }} />
+                  </colgroup>
+                  <TableHeader>
+                    <TableRow className="bg-slate-50">
+                      <TableHead className="p-4 text-base font-semibold text-slate-800">구분</TableHead>
+                      <TableHead className="p-4 text-center text-base font-semibold text-slate-800">프랜차이즈 가맹</TableHead>
+                      <TableHead className="p-4 text-center text-base font-semibold text-slate-800">컨텐츠 공급 가맹</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
                     {affiliateData.map((item) => (
-                      <TableRow key={item.category} className="border-b border-gray-200 last:border-b-0">
-                        <TableCell className="font-semibold text-gray-700 text-base align-middle p-4">
-                          {item.category}
-                        </TableCell>
-                        <TableCell className="align-middle p-4">
-                          <div className="flex flex-col items-center text-center w-fit mx-auto">
+                      <TableRow key={item.category} className="border-b border-slate-200 last:border-b-0">
+                        <TableCell className="p-4 align-middle text-sm font-semibold text-slate-700 md:text-base">{item.category}</TableCell>
+                        <TableCell className="p-4 align-middle">
+                          <div className="flex flex-col items-center text-center">
                             {item.fc.check && <CheckIcon />}
-                            <div className="font-medium text-sm text-gray-600">{item.fc.content}</div>
-                            <div className="text-xs text-gray-400">
-                              {item.fc.desc}
-                            </div>
+                            <p className="text-sm font-medium text-slate-700">{item.fc.content}</p>
+                            <p className="text-xs text-slate-500">{item.fc.desc}</p>
                           </div>
                         </TableCell>
-                        <TableCell className="align-middle p-4">
-                          <div className="flex flex-col items-center text-center w-fit mx-auto">
+                        <TableCell className="p-4 align-middle">
+                          <div className="flex flex-col items-center text-center">
                             {item.cp.check && <CheckIcon />}
-                            <div className="font-medium text-sm text-gray-600">{item.cp.content}</div>
-                            <div className="text-xs text-gray-400">
-                              {item.cp.desc}
-                            </div>
+                            <p className="text-sm font-medium text-slate-700">{item.cp.content}</p>
+                            <p className="text-xs text-slate-500">{item.cp.desc}</p>
                           </div>
                         </TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
                 </Table>
-              </div>
-            </div> {/* End of New Wrapper Div */}
+              </CardContent>
+            </Card>
 
-            <div className="mx-auto max-w-5xl w-full my-20">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>프랜차이즈 가맹 문의하기</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      본사와 동일한 시스템으로 안정적인 창업을 시작하세요.
-                    </p>
-                    <Button className="w-full">문의하기</Button>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>컨텐츠 공급 가맹 문의하기</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      기존 학원에 PCA의 검증된 코딩 교육 컨텐츠를 더하세요.
-                    </p>
-                    <Button className="w-full">문의하기</Button>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>가맹점 확인하기</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      가까운 PCA 가맹점을 찾아보세요.
-                    </p>
-                    <Button className="w-full">가맹점 찾기</Button>
-                  </CardContent>
-                </Card>
-              </div>
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+              <Card className="border-slate-200/70 shadow-sm">
+                <CardHeader>
+                  <CardTitle>프랜차이즈 가맹 문의하기</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-sm text-muted-foreground">본사와 동일한 시스템으로 안정적인 창업을 시작하세요.</p>
+                  <Button className="w-full">문의하기</Button>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200/70 shadow-sm">
+                <CardHeader>
+                  <CardTitle>컨텐츠 공급 가맹 문의하기</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-sm text-muted-foreground">기존 학원에 PCA의 검증된 코딩 교육 컨텐츠를 더하세요.</p>
+                  <Button className="w-full">문의하기</Button>
+                </CardContent>
+              </Card>
+
+              <Card className="border-slate-200/70 shadow-sm">
+                <CardHeader>
+                  <CardTitle>가맹점 확인하기</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-sm text-muted-foreground">가까운 PCA 가맹점을 확인해보세요.</p>
+                  <Button asChild className="w-full">
+                    <Link href="/campus">가맹점 찾기</Link>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
-              <Footer />
+
+        <Footer />
       </>
     );
   }

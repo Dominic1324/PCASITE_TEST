@@ -23,67 +23,78 @@ const Curriculums = () => {
     const currentCurriculums = individualCurriculumsData[activeCategory];
 
     return (
-        <section className="py-12 bg-white">
-            <div className="container mx-auto text-center">
-                <h2 className="text-2xl sm:text-4xl font-bold">PCA만의 교육 프로그램은?</h2>
-            </div>
-            <div className="container mx-auto mt-12 space-y-12">
-                {/* Existing Curriculums Map */}
-                {curriculumsData.map((curriculum, index) => (
-                    <div key={curriculum.id} className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                        <div 
-                            className="relative h-80 w-full bg-fixed bg-cover bg-center"
-                            style={{ backgroundImage: `url(${curriculum.image})` }}
-                        >
-                            <div className="absolute inset-0 bg-black opacity-50"></div>
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <h3 className="text-3xl font-bold text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{curriculum.title}</h3>
-                            </div>
-                        </div>
-                        <div className="py-12 px-4 md:px-6">
-                            <div className="max-w-3xl mx-auto text-center">
-                                <p className="text-lg text-muted-foreground mb-8">{curriculum.description}</p>
-                                <ul className="grid grid-cols-2 gap-4">
-                                    {curriculum.courses.map((course, courseIndex) => (
-                                        <li key={courseIndex} className="bg-gray-100 p-4 rounded-lg shadow-sm text-center">{course}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+        <section id="curriculum" className="py-20">
+            <div className="container mx-auto">
+                <div className="text-center">
+                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Programs</p>
+                    <h2 className="mt-2 text-3xl font-semibold text-slate-900 sm:text-4xl">입시 대비형 SW 프로그램</h2>
+                    <p className="mx-auto mt-4 max-w-3xl text-sm text-slate-500">
+                        학년·전형 목적에 따라 커리큘럼을 구성하고, 연구 주제와 산출물을 철저히 기록합니다. 코스별 산출물은 Admissions Lab과 연동되어 서류·면접 자료로 활용됩니다.
+                    </p>
+                </div>
 
-                {/* New "4th" Item for Individual Curriculums */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-                    <div className="py-12 px-4 md:px-6">
-                        <div className="max-w-5xl mx-auto text-center">
-                            <h3 className="text-3xl font-bold mb-8">개별 맞춤 커리큘럼</h3>
-                            <div className="flex justify-center space-x-4 mb-12">
-                                {categories.map((category) => (
-                                    <Button
-                                    key={category.key}
-                                    variant={activeCategory === category.key ? "default" : "outline"}
-                                    onClick={() => setActiveCategory(category.key)}
-                                    >
-                                    {category.label}
-                                    </Button>
-                                ))}
+                <div className="mt-12 space-y-10">
+                    {curriculumsData.map((curriculum) => (
+                        <div key={curriculum.id} className="grid gap-8 rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-sm lg:grid-cols-2">
+                            <div className="space-y-4 text-left">
+                                <h3 className="text-2xl font-semibold text-slate-900">{curriculum.title}</h3>
+                                <p className="text-sm text-slate-500">{curriculum.description}</p>
+                                <div className="rounded-2xl bg-slate-900/5 p-6 text-sm text-slate-600">
+                                    <p className="font-medium text-slate-900">코스 구성</p>
+                                    <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                                        {curriculum.courses.map((course) => (
+                                            <li key={course} className="flex items-center gap-2">
+                                                <span className="h-1.5 w-1.5 rounded-full bg-slate-900" />
+                                                {course}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="mx-auto grid items-start gap-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-full">
-                                {currentCurriculums.map((item) => (
-                                    <Card key={item.id} className="flex flex-row items-center p-3 text-left bg-gray-100 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                                        <div className="flex justify-center items-center mr-3">
-                                            <div className="rounded-full bg-primary text-primary-foreground p-2">
-                                                {item.icon && <item.icon className="h-5 w-5" />}
-                                            </div>
-                                        </div>
-                                        <CardContent className="p-0">
-                                            <h3 className="text-base font-bold mb-0.5">{item.name}</h3>
-                                        </CardContent>
-                                    </Card>
-                                ))}
+                            <div className="relative h-64 overflow-hidden rounded-2xl">
+                                <div
+                                    className="absolute inset-0 bg-cover bg-center"
+                                    style={{ backgroundImage: `linear-gradient(180deg, rgba(15,23,42,0.2), rgba(15,23,42,0.6)), url(${curriculum.image})` }}
+                                />
+                                <div className="relative z-10 flex h-full flex-col justify-end rounded-2xl border border-white/10 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent p-6 text-white">
+                                    <p className="text-sm text-white/70">Admissions Ready Project</p>
+                                    <p className="text-lg font-semibold">프로젝트 + 보고서 + 인터뷰 케어</p>
+                                </div>
                             </div>
                         </div>
+                    ))}
+                </div>
+
+                <div className="mt-12 rounded-3xl border border-slate-200 bg-white/90 p-10 shadow-sm">
+                    <div className="text-center">
+                        <h3 className="text-2xl font-semibold text-slate-900">개별 맞춤 커리큘럼</h3>
+                        <p className="mt-2 text-sm text-slate-500">전공 적합성과 경쟁력 강화를 위한 1:1 설계 프로그램입니다.</p>
+                    </div>
+                    <div className="mt-8 flex flex-wrap justify-center gap-3">
+                        {categories.map((category) => (
+                            <Button
+                                key={category.key}
+                                variant={activeCategory === category.key ? "default" : "outline"}
+                                className="rounded-full"
+                                onClick={() => setActiveCategory(category.key)}
+                            >
+                                {category.label}
+                            </Button>
+                        ))}
+                    </div>
+                    <div className="mt-10 grid gap-4 md:grid-cols-2">
+                        {currentCurriculums.map((item) => (
+                            <Card key={item.id} className="border-slate-200/80 bg-slate-50/50">
+                                <CardContent className="flex items-center gap-3 p-4">
+                                    <div className="rounded-full bg-slate-900/10 p-3 text-slate-900">
+                                        {item.icon && <item.icon className="h-5 w-5" />}
+                                    </div>
+                                    <div>
+                                        <h4 className="text-base font-semibold text-slate-900">{item.name}</h4>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        ))}
                     </div>
                 </div>
             </div>

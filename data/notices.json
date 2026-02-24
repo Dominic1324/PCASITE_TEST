@@ -1,0 +1,79 @@
+[
+  {
+    "id": 6,
+    "title": "뉴스 테스트 1",
+    "category": "뉴스",
+    "newsLink": "https://www.hemophilia.co.kr/news/articleView.html?idxno=10198",
+    "author": "PCA 운영팀",
+    "date": "2026-02-24",
+    "views": 0,
+    "content": "엄청난 뉴스 소식입니다.",
+    "imageUrls": [
+      "/news-images/uploads/004672e1-13bd-4e50-86ce-fa71a9b1c877.jpeg"
+    ],
+    "imageUrl": "/news-images/uploads/004672e1-13bd-4e50-86ce-fa71a9b1c877.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "AI 시대, 우리 아이 코딩 교육은?",
+    "date": "2025-11-01",
+    "author": "PCA 운영팀",
+    "views": 123,
+    "content": "<p><strong>AI 시대를 대비한 코딩 학습 방향을 안내하는 공지입니다.</strong></p><p></p><h2></h2><p></p>",
+    "imageUrl": "/news-images/uploads/c68a1420-15e8-44b8-846a-cd65bdec31fc.png",
+    "imageUrls": [
+      "/news-images/uploads/c68a1420-15e8-44b8-846a-cd65bdec31fc.png",
+      "/news-images/uploads/0be67520-d5ec-4e2a-8ea3-7cdda949208a.jpeg"
+    ],
+    "category": "공지사항",
+    "newsLink": ""
+  },
+  {
+    "id": 4,
+    "title": "신규 스크립트 코딩 과정 오픈",
+    "date": "2025-11-05",
+    "author": "PCA 운영팀",
+    "views": 123,
+    "content": "초중등 대상 신규 스크립트 코딩 과정이 오픈되었습니다.",
+    "imageUrls": [],
+    "imageUrl": "",
+    "category": "공지사항",
+    "newsLink": ""
+  },
+  {
+    "id": 3,
+    "title": "2024 한국코드페어 수상 실적",
+    "date": "2025-11-10",
+    "author": "PCA 운영팀",
+    "views": 123,
+    "content": "PCA 학생들의 한국코드페어 수상 소식을 안내드립니다.",
+    "imageUrls": [],
+    "imageUrl": "",
+    "category": "공지사항",
+    "newsLink": ""
+  },
+  {
+    "id": 2,
+    "title": "겨울방학 특강반 모집 시작",
+    "date": "2025-11-12",
+    "author": "PCA 운영팀",
+    "views": 123,
+    "content": "겨울방학 기간 프로젝트형 특강반 접수가 시작되었습니다.",
+    "imageUrls": [],
+    "imageUrl": "",
+    "category": "공지사항",
+    "newsLink": ""
+  },
+  {
+    "id": 1,
+    "title": "PCA 11월 학부모 설명회 안내",
+    "date": "2025-11-15",
+    "author": "PCA 운영팀",
+    "views": 123,
+    "content": "11월 학부모 설명회가 진행됩니다. 자세한 일정은 캠퍼스로 문의해주세요.",
+    "imageUrls": [],
+    "imageUrl": "",
+    "category": "공지사항",
+    "newsLink": ""
+  }
+]
